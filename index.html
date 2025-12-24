@@ -46,11 +46,13 @@
         }
 
         /* TÜM YAZILARIN ARKA PLANI */
-        p, h1, h2, h3, h4, h5, h6 {
-            background-color: rgba(255, 255, 255, 0.60);
-            padding: 8px 12px;
-            border-radius: 6px;
-        }
+       body, p, h1, h2, h3, h4, h5, h6 {
+    color: rgb(255, 140, 0);          /* turuncu yazı */
+    font-weight: bold;                 /* kalın yazı */
+    background-color: rgb(255, 255, 255); /* tamamen beyaz arka plan */
+    padding: 8px 12px;
+    border-radius: 6px;
+}
         .product__bg {
     background: rgba(255, 255, 255, 0.6) !important;
     opacity: 1 !important;
@@ -67,12 +69,17 @@
         padding: 8px 12px;
     border-radius: 6px;
     }
-        .tm-nav-text {
-    color: rgb(255, 140, 0); /* turuncu yazı */
-    font-weight: bold;        /* kalın yazı */
-    background-color: rgba(255,255,255,0.6); /* istersen arka plan */
-    padding: 4px 8px;        /* biraz boşluk */
-    border-radius: 4px;      /* köşeleri yuvarla */
+   .tm-nav-text {
+    color: rgb(255, 140, 0);           /* aynı turuncu */
+    font-weight: bold;                  /* kalın yazı */
+    background-color: rgb(255, 255, 255); /* tamamen beyaz arka plan */
+    padding: 4px 8px;                   /* küçük boşluk */
+    border-radius: 4px;                 /* köşe yuvarlama */
+}
+        /* Hover sırasında da renk değişmesin */
+.tm-nav-link:hover .tm-nav-text {
+    color: rgb(255, 140, 0);            /* hover’da da aynı turuncu */
+    background-color: rgb(255, 255, 255); /* hover’da da beyaz arka plan */
 }
 
 @media (max-width: 768px) {
@@ -284,6 +291,7 @@
 </body>
 
 </html>
+
 
 
 
