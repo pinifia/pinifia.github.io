@@ -80,6 +80,12 @@
     color: rgb(255, 140, 0);
     background-color: rgba(255, 255, 255, 0.5); /* hover’da da aynı */
 }
+        span {
+    background-color: rgba(255,255,255,1); /* mat arka plan */
+    color: rgb(255,140,0);             /* turuncu yazı */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
 
 @media (max-width: 768px) {
     .tm-site-header {
@@ -100,7 +106,9 @@
                         <div class="tm-site-header">
                             <h1 class="mb-4">Pinifia</h1>
                             <img src="img/underline.png" class="img-fluid mb-4">
-                            <p>Composer, singer, producer and music teacher</p>        
+                           <p>
+  <span>Composer,</span> <span>singer,</span> <span>producer</span> <span>and</span> <span>music</span> <span>teacher</span>
+</p>        
                         </div>                        
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -290,6 +298,7 @@
 </body>
 
 </html>
+
 
 
 
