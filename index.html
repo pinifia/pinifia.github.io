@@ -37,24 +37,25 @@
     <style>
         /* BUTONLARIN NORMAL HALİ */
         .product__bg {
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.5);
         }
 
         /* BUTON ÜZERİNE GELİNCE */
         .product:hover .product__bg {
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
         }
 
         /* TÜM YAZILARIN ARKA PLANI */
        body, p, h1, h2, h3, h4, h5, h6 {
-    color: rgb(255, 140, 0);          /* turuncu yazı */
-    font-weight: bold;                 /* kalın yazı */
-    background-color: rgb(255, 255, 255); /* tamamen beyaz arka plan */
-    padding: 8px 12px;
-    border-radius: 6px;
+    color: rgb(255, 140, 0);                /* turuncu yazı */
+    font-weight: bold;                       /* kalın yazı */
+    background-color: rgba(255, 255, 255, 0.5); /* yarı saydam beyaz arka plan */
+    display: inline;                         /* sadece yazının arkasında kutu */
+    padding: 2px 6px;                        /* kutunun etrafında boşluk */
+    border-radius: 4px;                       /* hafif köşe yuvarlama */
 }
         .product__bg {
-    background: rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.5) !important;
     opacity: 1 !important;
     transform: none !important;
     }
@@ -69,17 +70,18 @@
         padding: 8px 12px;
     border-radius: 6px;
     }
-   .tm-nav-text {
-    color: rgb(255, 140, 0);           /* aynı turuncu */
-    font-weight: bold;                  /* kalın yazı */
-    background-color: rgb(255, 255, 255); /* tamamen beyaz arka plan */
-    padding: 4px 8px;                   /* küçük boşluk */
-    border-radius: 4px;                 /* köşe yuvarlama */
+  .tm-nav-text {
+    color: rgb(255, 140, 0);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5); /* yarı saydam kutu */
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline;
 }
-        /* Hover sırasında da renk değişmesin */
+
 .tm-nav-link:hover .tm-nav-text {
-    color: rgb(255, 140, 0);            /* hover’da da aynı turuncu */
-    background-color: rgb(255, 255, 255); /* hover’da da beyaz arka plan */
+    color: rgb(255, 140, 0);
+    background-color: rgba(255, 255, 255, 0.5); /* hover’da da aynı */
 }
 
 @media (max-width: 768px) {
@@ -291,6 +293,7 @@
 </body>
 
 </html>
+
 
 
 
