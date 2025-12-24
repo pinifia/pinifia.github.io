@@ -37,24 +37,26 @@
     <style>
         /* BUTONLARIN NORMAL HALİ */
         .product__bg {
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.5);
         }
 
         /* BUTON ÜZERİNE GELİNCE */
         .product:hover .product__bg {
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
         }
 
         /* TÜM YAZILARIN ARKA PLANI */
        body, p, h1, h2, h3, h4, h5, h6 {
-    color: rgb(255, 140, 0);          /* turuncu yazı */
-    font-weight: bold;                 /* kalın yazı */
-    background-color: rgb(255, 255, 255); /* tamamen beyaz arka plan */
-    padding: 8px 12px;
-    border-radius: 6px;
+    color: rgb(255, 140, 0);                /* turuncu yazı */
+    font-weight: bold;                       /* kalın yazı */
+    background-color: rgba(255, 255, 255, 0.5); /* yarı saydam beyaz arka plan */
+    display: inline;                         /* sadece yazının arkasında kutu */
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.7); /* yazıya hafif siyah gölge */
+    padding: 2px 6px;                        /* kutunun etrafında boşluk */
+    border-radius: 4px;                       /* hafif köşe yuvarlama */
 }
         .product__bg {
-    background: rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.5) !important;
     opacity: 1 !important;
     transform: none !important;
     }
@@ -62,17 +64,10 @@
     background-position: center center;
     background-size: cover;
 }
-         body {
-        color: rgb(255, 140, 0); /* tüm yazılar turuncu olacak */
-        font-weight: bold;        /* yazıları kalın yapar */
-         text-shadow: 1px 1px 3px rgba(255,255,255,0.7); /* yazıya hafif siyah gölge */
-        padding: 8px 12px;
-    border-radius: 6px;
-    }
    .tm-nav-text {
     color: rgb(255, 140, 0);           /* aynı turuncu */
     font-weight: bold;                  /* kalın yazı */
-    background-color: rgb(255, 255, 255); /* tamamen beyaz arka plan */
+    background-color: rgb(255, 255, 255, 0.5); /* tamamen beyaz arka plan */
     padding: 4px 8px;                   /* küçük boşluk */
     border-radius: 4px;                 /* köşe yuvarlama */
 }
@@ -291,6 +286,7 @@
 </body>
 
 </html>
+
 
 
 
