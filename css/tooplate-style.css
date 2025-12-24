@@ -19,11 +19,6 @@ h1 {
 }
 
 #tm-bg {
-  @media (max-width: 768px) {
-  #tm-bg {
-    background-position: left center;
-  }
-}
   position: fixed;
   top: 0;
   left: 0;
@@ -419,6 +414,13 @@ p:last-child {
 
   .fa-3x {
     font-size: 2.2em;
+    @media (max-width: 1024px) {
+  #tm-bg {
+    background-position: left center !important;
   }
 }
+
+  }
+}
+
 
