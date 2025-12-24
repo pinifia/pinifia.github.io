@@ -413,13 +413,13 @@ p:last-child {
   }
 
   .fa-3x {
-    font-size: 2.2em;
-    @media (max-width: 1024px) {
-  #tm-bg {
-    background-position: left center !important;
-  }
+    font-size: 2.2em;  }
 }
 
+/* 🔥 ARKA PLAN MOBİL AYARI */
+@media (max-width: 1024px) {
+  #tm-bg {
+    background-position: left center !important;
   }
 }
 
