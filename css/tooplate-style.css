@@ -419,8 +419,9 @@ p:last-child {
 /* 🔥 ARKA PLAN MOBİL AYARI */
 @media (max-width: 1024px) {
   #tm-bg {
-    background-position: left center !important;
+    background-position: 15% center !important;
   }
 }
+
 
 
