@@ -186,60 +186,73 @@ button, input, select, textarea {
   -webkit-backdrop-filter: blur(4px);    /* Safari */
 }
 
-/* Mobilde biraz daha nefes */
+/* =========================
+   DESKTOP / GENEL
+========================= */
+
+.about-panel {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 0;
+  padding: 24px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.about-panel p {
+  text-align: justify;
+  text-justify: inter-word;
+
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET & ALT
+========================= */
+
 @media (max-width: 768px) {
   .about-panel {
     padding: 18px;
   }
 }
-@media (max-width: 576px) {
-  .about-panel p {
-    font-size: 17px;   /* burayı 16–18 arası dene */
-    line-height: 1.6;
-  }
-}
-@media (max-width: 576px) {
-  .about-panel p {
-    text-align: left;     /* justify KAPALI */
-    hyphens: none;        /* kelime bölme KAPALI */
-  }
-}
-@media (max-width: 576px) {
-  .tm-site-header-container .col-12 {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-}
+
+
+/* =========================
+   MOBILE (GENİŞ & SADE)
+========================= */
+
 @media (max-width: 576px) {
 
-  /* 1️⃣ Container yan boşluklarını kır */
+  /* container yan boşluklarını azalt */
   .tm-site-header-container {
     padding-left: 4px;
     padding-right: 4px;
   }
 
-  /* 2️⃣ Kolon boşluklarını neredeyse sıfırla */
+  /* kolon paddinglerini azalt */
   .tm-site-header-container .col-12 {
     padding-left: 4px;
     padding-right: 4px;
   }
 
-  /* 3️⃣ Panel iç boşluğunu minimuma indir */
+  /* panel iç boşluk */
   .about-panel {
     padding: 14px 8px;
   }
 
-  /* 4️⃣ Metni rahat tut */
+  /* mobil metin ayarları */
   .about-panel p {
     font-size: 17px;
     line-height: 1.6;
+
     text-align: left;
     hyphens: none;
   }
-}
-  .about-panel p {
-  text-align: justify;       /* iki yana hizala */
-  text-justify: inter-word;  /* kelime bazlı hizalama */
 }
     </style>
 </head>
