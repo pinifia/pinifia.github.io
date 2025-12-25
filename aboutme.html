@@ -210,6 +210,33 @@ button, input, select, textarea {
     padding-right: 6px;
   }
 }
+@media (max-width: 576px) {
+
+  /* 1️⃣ Container yan boşluklarını kır */
+  .tm-site-header-container {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  /* 2️⃣ Kolon boşluklarını neredeyse sıfırla */
+  .tm-site-header-container .col-12 {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  /* 3️⃣ Panel iç boşluğunu minimuma indir */
+  .about-panel {
+    padding: 14px 8px;
+  }
+
+  /* 4️⃣ Metni rahat tut */
+  .about-panel p {
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: left;
+    hyphens: none;
+  }
+}
   .about-panel p {
   text-align: justify;       /* iki yana hizala */
   text-justify: inter-word;  /* kelime bazlı hizalama */
