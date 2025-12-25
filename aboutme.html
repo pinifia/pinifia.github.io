@@ -122,9 +122,21 @@ button, input, select, textarea {
     padding-top: 0 !important;
     margin-top: 0 !important;
 }
-        .tm-site-header-container img {
+/* FOTOĞRAFLAR HER ZAMAN ÜSTTE OLSUN */
+.tm-site-header-container img {
   position: relative;
-  z-index: 3;
+  z-index: 10;
+}
+
+/* BACKGROUND KATMANI GERİDE KALSIN */
+#tm-bg {
+  z-index: 0;
+}
+
+/* ANA İÇERİK ÖNDE OLSUN */
+#tm-wrap {
+  position: relative;
+  z-index: 1;
 }
     </style>
 </head>
