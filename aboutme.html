@@ -415,19 +415,31 @@ $(function(){
 });
 </script>          
 
-               <!-- About Me sayfasının en altına ekle -->
+<!-- About Me sayfasının en altına ekle -->
 <div class="link-grid-container">
-  <a href="index.html" class="link-box">Back to Home</a>
-  <a href="index.html" class="link-box">Link 1</a>
-  <a href="index.html" class="link-box">Link 2</a>
-  <a href="index.html" class="link-box">Link 3</a>
+  <a href="index.html" class="link-box">
+    <img src="img/icon01.gif" class="link-icon" alt="Icon 1">
+    <span>Back to Home</span>
+  </a>
+  <a href="index.html" class="link-box">
+    <img src="img/icon02.gif" class="link-icon" alt="Icon 2">
+    <span>Link 1</span>
+  </a>
+  <a href="index.html" class="link-box">
+    <img src="img/icon03.gif" class="link-icon" alt="Icon 3">
+    <span>Link 2</span>
+  </a>
+  <a href="index.html" class="link-box">
+    <img src="img/icon04.gif" class="link-icon" alt="Icon 4">
+    <span>Link 3</span>
+  </a>
 </div>
 
 <style>
 /* Grid container */
 .link-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 eşit sütun */
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin: 40px auto;
   max-width: 1200px;
@@ -437,9 +449,12 @@ $(function(){
 /* Kutular */
 .link-box {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.6); /* hafif şeffaf beyaz */
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.55); /* cam efekti */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: rgb(255,140,0);
   font-family: 'Marck Script', cursive;
   font-weight: bold;
@@ -457,6 +472,13 @@ $(function(){
   transform: translateY(-4px);
 }
 
+/* İkon stili */
+.link-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
 /* Mobilde responsive: 2x2 grid */
 @media (max-width: 768px) {
   .link-grid-container {
@@ -468,6 +490,10 @@ $(function(){
   .link-box {
     font-size: 18px;
     padding: 18px;
+  }
+
+  .link-icon {
+    width: 50px;
   }
 }
 
@@ -482,7 +508,13 @@ $(function(){
     font-size: 16px;
     padding: 14px;
   }
+
+  .link-icon {
+    width: 40px;
+  }
 }
+</style>
+
 </style>
 
 
