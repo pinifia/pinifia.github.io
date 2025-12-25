@@ -112,6 +112,16 @@ button, input, select, textarea {
         background-position: left center;
     }
 }
+        html, body {
+    height: auto;
+    overflow-y: auto;
+}
+
+.tm-main-content {
+    min-height: 100vh;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
     </style>
 </head>
 
@@ -144,42 +154,11 @@ Music has been a constant companion throughout my life, shaping both my personal
     <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->  
     <script src="js/anime.min.js"></script>                     <!-- http://animejs.com/ -->
     <script src="js/main.js"></script>  
-    <script>      
-function setupFooter() {
-    var pageHeight = $('.tm-site-header-container').height() + $('footer').height() + 100;
-
-    var main = $('.tm-main-content');
-
-    if($(window).height() < pageHeight) {
-        main.addClass('tm-footer-relative');
-    }
-    else {
-        main.removeClass('tm-footer-relative');   
-    }
-}
-
-/* DOM ready ------------------------------------------------*/
+        <script>
 $(function(){
-    // About Me sayfasında footer setup çalışmasın
-    if(window.location.pathname.indexOf('aboutme.html') === -1){
-        setupFooter();
-        $(window).resize(function(){
-            setupFooter();
-        });
-    }
-
-    $('.tm-current-year').text(new Date().getFullYear()); 
+    $('.tm-current-year').text(new Date().getFullYear());
 });
-.tm-main-content {
-    padding-top: 0 !important;  /* index ile aynı hizaya çek */
-    margin-top: 0 !important;   /* varsa ekstra margin’i sıfırla */
-}
-
-/* Başlık üst boşluğu varsa sıfırla */
-.tm-page-title {
-    margin-top: 0 !important;
-}
-    </script>             
+</script>          
 
 </body>
 
