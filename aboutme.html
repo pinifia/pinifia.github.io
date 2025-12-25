@@ -404,15 +404,6 @@ button, input, select, textarea {
     </div>
   </div>
   </div>
-               <div class="grid__item">
-  <div class="product">
-    <a href="index.html" class="tm-nav-link">
-      <img src="img/icon2.gif" class="tm-nav-icon" alt="Home Icon">
-      <span class="tm-nav-text">Back to Home</span>
-      <div class="product__bg"></div>
-    </a>
-  </div>
-</div>
     <!-- load JS -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>         <!-- https://jquery.com/ -->    
     <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->  
@@ -423,6 +414,77 @@ $(function(){
     $('.tm-current-year').text(new Date().getFullYear());
 });
 </script>          
+
+               <!-- About Me sayfasının en altına ekle -->
+<div class="link-grid-container">
+  <a href="index.html" class="link-box">Back to Home</a>
+  <a href="index.html" class="link-box">Link 1</a>
+  <a href="index.html" class="link-box">Link 2</a>
+  <a href="index.html" class="link-box">Link 3</a>
+</div>
+
+<style>
+/* Grid container */
+.link-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 eşit sütun */
+  gap: 16px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 12px;
+}
+
+/* Kutular */
+.link-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6); /* hafif şeffaf beyaz */
+  color: rgb(255,140,0);
+  font-family: 'Marck Script', cursive;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.link-box:hover {
+  background: rgba(0, 74, 159, 0.5);
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* Mobilde responsive: 2x2 grid */
+@media (max-width: 768px) {
+  .link-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px auto;
+  }
+
+  .link-box {
+    font-size: 18px;
+    padding: 18px;
+  }
+}
+
+/* Çok küçük ekranlarda (telefon) */
+@media (max-width: 480px) {
+  .link-grid-container {
+    grid-template-columns: 1fr; /* tek sütun üst üste */
+    gap: 12px;
+  }
+
+  .link-box {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+</style>
+
 
 </body>
 
