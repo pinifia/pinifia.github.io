@@ -312,7 +312,15 @@ button, input, select, textarea {
 
             $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
         });
+.tm-main-content {
+    padding-top: 0 !important;  /* index ile aynı hizaya çek */
+    margin-top: 0 !important;   /* varsa ekstra margin’i sıfırla */
+}
 
+/* Başlık üst boşluğu varsa sıfırla */
+.tm-page-title {
+    margin-top: 0 !important;
+}
     </script>             
 
 </body>
