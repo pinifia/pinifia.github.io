@@ -177,6 +177,19 @@ button, input, select, textarea {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+        /* ABOUT ME – KOLON ARKASI ŞEFFAF BEYAZ */
+.about-panel {
+  background: rgba(255, 255, 255, 0.55); /* şeffaf beyaz */
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Mobilde biraz daha nefes */
+@media (max-width: 768px) {
+  .about-panel {
+    padding: 18px;
+  }
+}
     </style>
 </head>
 
@@ -226,6 +239,7 @@ button, input, select, textarea {
 
   <!-- SOL: METİN -->
   <div class="col-12 col-md-6">
+  <div class="about-panel">
     <p>
       <span>
         From my second year onward, I began working as a freelance composer, creating original music for various projects. Additionally, I participated in game jams as a musician, which allowed me to expand my skills in game music composition, sound design, and sound effects, greatly broadening my creative and technical horizons.
@@ -237,13 +251,15 @@ button, input, select, textarea {
         After graduating at the top of my class, I joined Zonex Entertainment Studios as a composer, where I focused on creating music for games. Later, I spent two years teaching music at an international school. Currently, I teach chemistry at another international school while continuing to compose, produce, and perform music actively.
       </span>
     </p>
+       </div>
   </div>
 
   <!-- SAĞ: GÖRSEL -->
   <div class="col-12 col-md-6 text-center">
+    <div class="about-panel">
     <img src="img/gallery-img-03-tn.jpg" class="img-fluid">
   </div>
-
+</div>
 </div>
 
                  <!-- BLOK 4 -->
