@@ -109,10 +109,11 @@ span {
   line-height: 1.6;
   z-index: 0;
 }
+
 span::before {
   content: "";
   position: absolute;
-  inset: -40% 0 -40% 0; /* 🔥 ÜST–ALT TAŞMA */
+  inset: -40% 0 -40% 0;
   z-index: -1;
 
   background: linear-gradient(
@@ -121,17 +122,27 @@ span::before {
     rgba(255,255,255,0.7) 35%,
     rgba(255,255,255,0.7) 65%,
     rgba(255,255,255,0) 100%
-  ),
-       linear-gradient(
-      to right,
-      rgba(0,0,0,0) 0%,
-      rgba(0,0,0,1) 6px,
-      rgba(0,0,0,1) calc(100% - 6px),
-      rgba(0,0,0,0) 100%
-    );
+  );
+
+  /* ✅ SAĞ–SOL FADE BURADA, ARTIK SİYAH DEĞİL */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 8px,
+    rgba(0,0,0,1) calc(100% - 8px),
+    rgba(0,0,0,0) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 8px,
+    rgba(0,0,0,1) calc(100% - 8px),
+    rgba(0,0,0,0) 100%
+  );
 
   pointer-events: none;
 }
+
 
 
         @media (max-width: 768px) {
@@ -341,6 +352,7 @@ span::before {
     </script>             
 </body>
 </html>
+
 
 
 
