@@ -127,24 +127,22 @@ span {
             }
         }
         
-        .hero-text-glass {
-  padding: 18px 22px;
-  margin-top: 12px;
+ .hero-text-glass {
+  display: inline-block;   /* 🔥 kutu yazı kadar olsun */
+  padding: 6px 10px;       /* 🔥 sıkı kutu */
+  margin-top: 8px;
 
-  /* 🧊 Anasayfa butonlarıyla aynı buzlu cam */
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.45); /* biraz daha hafif cam */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 
-  /* ⬜ 1px beyaz çerçeve */
   border: 1px solid rgba(255, 255, 255, 0.9);
-
-  /* köşeler keskin */
   border-radius: 0;
 }
 
 .hero-text-glass p {
-  margin: 0;           /* ekstra boşlukları sıfırla */
+  margin: 0;
+  line-height: 1.4;        /* 🔥 dikey boşluk azaldı */
   color: rgb(255,119,51);
 }
 
@@ -352,6 +350,7 @@ span {
     </script>             
 </body>
 </html>
+
 
 
 
