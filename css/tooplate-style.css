@@ -104,8 +104,8 @@ p {
 
     /* Buzlu cam efekti */
     background: rgba(255, 255, 255, 0.04); /* daha şeffaf */
-    backdrop-filter: blur(1px); /* daha az blur */
-    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(0px); /* daha az blur */
+    -webkit-backdrop-filter: blur(0px);
     border-radius: 0; /* köşeler düz */
     transition: all 0.3s ease;
 }
@@ -434,6 +434,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
