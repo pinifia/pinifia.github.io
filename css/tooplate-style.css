@@ -120,8 +120,8 @@ p {
 }
 
 .product:hover {
-  background: rgba(219,105,63,0.5); /* diğer sayfadaki gibi */
-  color: rgba(255,128,0,1);
+  background: transparent; /* veya silebilirsin */
+  color: inherit;
 }
 
 .tm-nav-icon {
@@ -422,6 +422,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
