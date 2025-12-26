@@ -71,18 +71,20 @@
     content: attr(data-text);
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
 
     color: white;
     opacity: 1;
 
-    filter: blur(6px);
-    transform: scale(1.05);
+    filter: blur(8px);
+    transform: scale(1.12);
 
     pointer-events: none;
 }
         .glow-layer {
-    text-shadow:
+            position: relative;
+            z-index: 2;
+         text-shadow:
         0 0 6px  rgba(255,255,255,1),
         0 0 8px  rgba(255,255,255,0.90),
         0 0 10px rgba(255,255,255,0.45),
@@ -372,6 +374,7 @@
     </script>             
 </body>
 </html>
+
 
 
 
