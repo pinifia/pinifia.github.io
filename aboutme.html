@@ -161,10 +161,12 @@
         .video-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 56.25%;
-    margin-bottom: 16px; /* ← iframe’lerin altına boşluk ekler */
+    padding-top: 56.25%; /* ← iframe’lerin altına boşluk ekler */
         }
         .video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0; }
+        .about-panel .video-wrapper:not(:last-child) {
+    margin-bottom: 20px; /* videolar arası boşluk */
+}
         
         /* LINK GRID */
         .link-grid-container{
