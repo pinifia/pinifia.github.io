@@ -5,15 +5,8 @@
     <link rel="icon" href="/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Pinifia</title>
 
-    <!--
-    Template 2097 Pop
-    https://www.tooplate.com/view/2097-pop
-    -->
-
-    <!-- load CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
@@ -22,505 +15,268 @@
     <link rel="stylesheet" href="css/tooplate-style.css">
 
     <script>
-        document.documentElement.className="js";
-        var supportsCssVars=function(){
-            var e,t=document.createElement("style");
-            return t.innerHTML="root: { --tmp-var: bold; }",
-            document.head.appendChild(t),
-            e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),
-            t.parentNode.removeChild(t),
-            e
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            t.innerHTML = "root: { --tmp-var: bold; }";
+            document.head.appendChild(t);
+            e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight","var(--tmp-var)"));
+            t.parentNode.removeChild(t);
+            return e;
         };
-        supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
+        supportsCssVars() || alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
     </script>
 
-    <!-- 🔥 SENİN EKLEDİĞİN STİLLER (EN ALTA) -->
     <style>
-        /* BUTONLARIN NORMAL HALİ */
-        .product__bg {
-            background: rgba(255, 255, 255, 0.5);
+        /* GENEL YAZI & FONT */
+        body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+            font-family: 'Nunito', sans-serif !important;
+            line-height: 1.5;
+            color: rgb(44, 69, 105);
+            font-weight: bold;
+            background-color: rgba(255,255,255,0);
+            padding: 8px 12px;
+            border-radius: 6px;
         }
+        p { font-size: 20px; }
+        h1 { font-size: 46px; }
 
-        /* BUTON ÜZERİNE GELİNCE */
+        /* BUTON & ÜZERİNE GELİNCE */
+        .product__bg {
+            background: rgba(255, 255, 255, 0.6);
+            opacity: 1;
+            transform: none;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+        }
         .product:hover .product__bg {
             background: rgba(255, 0, 0, 0.5);
         }
 
-        /* TÜM YAZILARIN ARKA PLANI */
-        body, p, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.5;
-    color: rgb(44, 69, 105);
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 8px 12px;
-    border-radius: 6px;
-}
-p { -size: 20px; }
-h1 { -size: 46px; }
-        .product__bg {
-    background: rgba(255, 255, 255, 0.6) !important;
-    opacity: 1 !important;
-    transform: none !important;
-    position: absolute;   /* kutuyu sabitle */
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 0;           /* yazının arkasında */
-    }
-.tm-site-header {
-    background-position: center center;
-    background-size: cover;
-}
-         .tm-nav-icon {
-    width: 40%;           /* GIF genişliği */
-    height: auto;         /* yüksekliği orantılı */
-    display: block;       /* block olarak kalmalı */
-    margin: 0 auto;       /* yatayda ortalar */
-    object-fit: contain;  /* GIF’in tamamı görünür */
-    z-index: 1;           /* yazının arkasında */
-}
-.tm-nav-text {   
-    font-family: 'Nunito', sans-serif !important; /* Marck Script uygulanır */
-    position: relative;
-    line-height: 1.2;
-    font-weight: bold;       /* bold */
-    font-size: 20px;         /* yazı boyutu */
-    margin-top: 8px;         /* GIF ile yazı arası boşluk */
-    z-index: 2;
-    top: 0;                  /* yukarı kaymayı engelle */
-    color: rgb(44, 69, 105);
-    background-color: rgba(255, 255, 255, 0.5); /* yarı saydam kutu */
-    padding: 6px 6px;
-    border-radius: 4px;
-}
-.tm-nav-link:hover .tm-nav-text {
-    color: rgb(255, 0, 0);
-    background-color: rgba(255, 255, 255, 0.5); /* hover’da da aynı */
-    gap: 8px;                    /* GIF ile yazı arası boşluk */
-}
+        /* NAV & ICON */
+        .tm-nav-icon {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            z-index: 1;
+        }
+        .tm-nav-text {
+            position: relative;
+            line-height: 1.2;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 8px;
+            z-index: 2;
+            top: 0;
+            color: rgb(44,69,105);
+            background-color: rgba(255,255,255,0.5);
+            padding: 6px;
+            border-radius: 4px;
+            font-family: 'Nunito', sans-serif !important;
+        }
+        .tm-nav-link:hover .tm-nav-text {
+            color: rgb(255,0,0);
+            background-color: rgba(255,255,255,0.5);
+            gap: 8px;
+        }
         span {
-    background-color: rgba(255,255,255,1); /* mat arka plan */
-    color: rgb(69, 128, 170);             /* turuncu yazı */
-    padding: 2px 4px;
-    border-radius: 3px;
-}
-        .link-box:hover span {
-  color: rgba(76, 105, 141, 0.5); /* yazıyı beyaz yap */
-}
-button, input, select, textarea {
-    font-family: 'Nunito', sans-serif !important;
-  }
-@media (max-width: 768px) {
-    .tm-site-header {
-        background-position: left center;
-    }
-}
-        html, body {
-    height: auto;
-    overflow-y: auto;
-}
+            background-color: rgba(255,255,255,1);
+            color: rgb(66,157,220);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
 
-.tm-main-content {
-    min-height: 100vh;
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-}
-/* FOTOĞRAFLAR HER ZAMAN ÜSTTE OLSUN */
-.tm-site-header-container img {
-  position: relative;
-  z-index: 10;
-}
+        /* ABOUT PANEL */
+        .about-panel {
+            background: rgba(255, 255, 255, 0.55);
+            border-radius: 0;
+            padding: 24px;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            margin-bottom: 24px;
+        }
+        .about-panel p {
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            line-height: 1.6;
+        }
 
-/* BACKGROUND KATMANI GERİDE KALSIN */
-#tm-bg {
-  z-index: 0;
-}
+        /* WRAPPER & CONTAINER */
+        #tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
+        .tm-main-content { width: 100%; display:flex; justify-content:center; min-height:100vh; padding-top:0; margin-top:0; position:relative; top:0; transform:none; }
+        .tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
+        .tm-site-header-container .row { justify-content:center; }
+        .tm-site-header-container img { position:relative; z-index:10; }
+        #tm-bg { z-index:0; }
 
-/* ANA İÇERİK ÖNDE OLSUN */
-#tm-wrap {
-  position: relative;
-  z-index: 1;
-}
-        /* ABOUT ME SAYFASI – NORMAL SCROLL ZORLA */
-.tm-main-content {
-  position: relative !important;
-  top: 0 !important;
-  transform: none !important;
-}
+        .tm-site-header { background-position:center center; background-size:cover; }
+        @media (max-width:768px){ .tm-site-header { background-position:left center; } }
 
-.tm-site-header-container {
-  margin-top: 120px; /* üstten nefes */
-}
-.tm-site-header-container {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+        /* MOBILE & TABLET */
+        @media (max-width:768px){ .about-panel{ padding:18px; } }
+        @media (max-width:576px){
+            .tm-site-header-container { padding-left:4px; padding-right:4px; margin-top:20px !important; }
+            .tm-site-header-container .col-12 { padding-left:4px; padding-right:4px; }
+            .about-panel{ padding:14px 8px; }
+            .about-panel p{ font-size:17px; line-height:1.6; text-align:left; hyphens:none; }
+        }
 
-/* ROW’LAR EKRAN ORTASINDA KALSIN */
-.tm-site-header-container .row {
-  justify-content: center;
-}
-        /* ANA SARICIYI GERÇEKTEN ORTALA */
-#tm-wrap {
-  display: flex;
-  justify-content: center;
-}
+        /* VIDEO WRAPPER */
+        .video-wrapper { position:relative; width:100%; padding-top:56.25%; }
+        .video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0; }
 
-/* İÇERİĞİ ORTAYA AL */
-.tm-main-content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-/* GERÇEK CONTAINER */
-.tm-site-header-container {
-  width: 100%;
-  max-width: 1100px;   /* masaüstü genişliği */
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-        /* ABOUT ME – KOLON ARKASI ŞEFFAF BEYAZ */
-.about-panel {
-  background: rgba(255, 255, 255, 0.55); /* şeffaf beyaz */
-  border-radius: 0px;
-  padding: 24px;
-  backdrop-filter: blur(4px);            /* CAM EFEKTİ */
-  -webkit-backdrop-filter: blur(4px);    /* Safari */
-}
-
-/* =========================
-   DESKTOP / GENEL
-========================= */
-
-.about-panel {
-  background: rgba(255, 255, 255, 0.55);
-  border-radius: 0;
-  padding: 24px;
-
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.about-panel p {
-  text-align: justify;
-  text-justify: inter-word;
-
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-
-  line-height: 1.6;
-}
-
-  .about-panel {
-  margin-bottom: 24px;
-}
-
-/* =========================
-   TABLET & ALT
-========================= */
-
-@media (max-width: 768px) {
-  .about-panel {
-    padding: 18px;
-  }
-}
-
-
-/* =========================
-   MOBILE (GENİŞ & SADE)
-========================= */
-
-@media (max-width: 576px) {
-
-  /* container yan boşluklarını azalt */
-  .tm-site-header-container {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-
-  /* kolon paddinglerini azalt */
-  .tm-site-header-container .col-12 {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-
-  /* panel iç boşluk */
-  .about-panel {
-    padding: 14px 8px;
-  }
-
-  /* mobil metin ayarları */
-  .about-panel p {
-    font-size: 17px;
-    line-height: 1.6;
-
-    text-align: left;
-    hyphens: none;
-  }
-}
-@media (max-width: 576px) {
-  .tm-site-header-container {
-    margin-top: 20px !important;
-  }
-}
-        /* RESPONSIVE YOUTUBE VIDEO */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 oran */
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.video-wrapper iframe {
-  border-radius: 0;
-}
+        /* LINK GRID */
+        .link-grid-container{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:16px;
+            margin:40px auto;
+            max-width:1200px;
+            padding:0 12px;
+        }
+        .link-box{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            background: rgba(255,255,255,0.55);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: rgb(255,140,0);
+            font-family:'Nunito',sans-serif;
+            font-weight:bold;
+            font-size:20px;
+            text-align:center;
+            padding:24px;
+            border-radius:0;
+            text-decoration:none;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .link-box:hover{
+            background: rgba(76,105,141,0.5);
+            color:white;
+            transform:translateY(-4px);
+        }
+        .link-icon{ width:60px; height:auto; margin-bottom:12px; }
+        @media(max-width:768px){
+            .link-grid-container{ grid-template-columns:repeat(2,1fr); gap:12px; margin:20px auto; }
+            .link-box{ font-size:18px; padding:18px; }
+            .link-icon{ width:50px; }
+        }
+        @media(max-width:480px){
+            .link-grid-container{ grid-template-columns:1fr; gap:12px; }
+            .link-box{ font-size:16px; padding:14px; }
+            .link-icon{ width:40px; }
+        }
+        .link-box:hover span{ color:white; }
     </style>
 </head>
 
-
 <body>
-    <div id="tm-bg"></div>
-    <div id="tm-wrap">
-        <div class="tm-main-content">
-           <div class="container tm-site-header-container">
+<div id="tm-bg"></div>
+<div id="tm-wrap">
+    <div class="tm-main-content">
+        <div class="container tm-site-header-container">
 
- <!-- BLOK 1 -->
-<div class="row align-items-center mb-5">
+            <!-- BLOK 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="about-text">
+                        <div class="about-panel">
+                            <h1 class="mb-4"><span>About me..</span></h1>
+                            <img src="img/underline.png" class="img-fluid mb-4">
+                            <p><span>
+                                My first encounter with music started in elementary school when an Italian friend introduced me to Finale, a music composition software, approximately in 2002. I spent countless hours creating compositions in Finale, and at the same time, I began exploring different instruments at home, such as guitar and keyboard, experimenting and trying to create my own sounds.
+                            </span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <div class="about-panel">
+                        <img src="img/gallery-img-01-tn.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
 
-  <div class="col-12 col-md-6">
-    <div class="about-text">
-        <div class="about-panel">
-      <h1 class="mb-4"><span>About me..</span></h1>
-      <img src="img/underline.png" class="img-fluid mb-4">
+            <!-- BLOK 2 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6 order-md-2">
+                    <div class="about-panel">
+                        <p><span>In 2010, while attending Boğaziçi University, I began performing in jazz and rock ensembles. In 2012, I started taking formal vocal lessons, and since then, I have never stopped working on my voice. Over the years, I joined various music groups, performing extensively in genres such as rock, pop, funk, and R&B, accumulating over a decade of stage experience.</span></p>
+                        <p><span>During my university years, I was also preparing for conservatory exams. After completing my Chemistry degree at Boğaziçi, I was accepted into the Music Department at Bilgi University, where I improved my skills in areas such as music theory, orchestration, arranging, recording, and sound production. While studying music, I performed in musicals and rock shows organized by ITU’s musical and rock clubs, gaining further stage experience and exposure to collaborative performance.</span></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 text-center">
+                    <div class="about-panel">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/bFZ6wVrzE1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/Y13_pjJmw7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/6vA-CYUGTVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <p>
-        <span>
-          My first encounter with music started in elementary school when an Italian friend introduced me to Finale, a music composition software, approximately in 2002. I spent countless hours creating compositions in Finale, and at the same time, I began exploring different instruments at home, such as guitar and keyboard, experimenting and trying to create my own sounds.
-        </span>
-      </p>
-    </div>
-  </div>
- </div>
+            <!-- BLOK 3 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="about-panel">
+                        <p><span>From my second year onward, I began working as a freelance composer, creating original music for various projects. Additionally, I participated in game jams as a musician, which allowed me to expand my skills in game music composition, sound design, and sound effects, greatly broadening my creative and technical horizons.</span></p>
+                        <p><span>After graduating at the top of my class, I joined Zonex Entertainment Studios as a composer, where I focused on creating music for games. Later, I spent two years teaching music at an international school. Currently, I teach chemistry at another international school while continuing to compose, produce, and perform music actively.</span></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <div class="about-panel">
+                        <img src="img/welcome-2.JPEG" class="img-fluid">
+                    </div>
+                </div>
+            </div>
 
-  <div class="col-12 col-md-6 text-center">
-   <div class="about-panel">
-    <img src="img/gallery-img-01-tn.jpg" class="img-fluid">
-  </div>
-</div>
-</div>
+            <!-- BLOK 4 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6 order-md-2">
+                    <div class="about-panel">
+                        <p><span>Music has been a constant companion throughout my life, shaping both my personal and professional journey. Whether performing live, composing for games, or teaching, I strive to bring creativity, emotion, and dedication to every project I undertake.</span></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 text-center">
+                    <div class="about-panel">
+                        <img src="img/stuyo.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
 
-  <!-- BLOK 2 -->
-  <div class="row align-items-center mb-5">
-    <div class="col-12 col-md-6 order-md-2">
-      <div class="about-panel">
-      <p><span>In 2010, while attending Boğaziçi University, I began performing in jazz and rock ensembles. In 2012, I started taking formal vocal lessons, and since then, I have never stopped working on my voice. Over the years, I joined various music groups, performing extensively in genres such as rock, pop, funk, and R&B, accumulating over a decade of stage experience.</span></p>
-      <p><span>During my university years, I was also preparing for conservatory exams. After completing my Chemistry degree at Boğaziçi, I was accepted into the Music Department at Bilgi University, where I improved my skills in areas such as music theory, orchestration, arranging, recording, and sound production. While studying music, I performed in musicals and rock shows organized by ITU’s musical and rock clubs, gaining further stage experience and exposure to collaborative performance.</span></p>
-    </div>
- </div>
+            <!-- LINK GRID -->
+            <div class="link-grid-container">
+                <a href="index.html" class="link-box"><img src="img/home.png" class="link-icon" alt="Icon 1"><span>Back to Home</span></a>
+                <a href="index.html" class="link-box"><img src="img/icon2.gif" class="link-icon" alt="Icon 2"><span>Compositions & Portfolio</span></a>
+                <a href="index.html" class="link-box"><img src="img/icon3.gif" class="link-icon" alt="Icon 3"><span>Live & Multimedia</span></a>
+                <a href="index.html" class="link-box"><img src="img/icon9.png" class="link-icon" alt="Icon 4"><span>Social Media & Contact</span></a>
+            </div>
 
-    <div class="col-12 col-md-6 order-md-1 text-center">
-         <div class="about-panel">
-          <div class="about-panel">
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/bFZ6wVrzE1Y"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-             <div class="about-panel">
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/Y13_pjJmw7E"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-             <div class="about-panel">
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/6vA-CYUGTVM"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
         </div>
-      </div>
-   </div>
-
- <!-- BLOK 3 -->
-<div class="row align-items-center mb-5">
-
-  <!-- SOL: METİN -->
-  <div class="col-12 col-md-6">
-  <div class="about-panel">
-    <p>
-      <span>
-        From my second year onward, I began working as a freelance composer, creating original music for various projects. Additionally, I participated in game jams as a musician, which allowed me to expand my skills in game music composition, sound design, and sound effects, greatly broadening my creative and technical horizons.
-      </span>
-    </p>
-
-    <p>
-      <span>
-        After graduating at the top of my class, I joined Zonex Entertainment Studios as a composer, where I focused on creating music for games. Later, I spent two years teaching music at an international school. Currently, I teach chemistry at another international school while continuing to compose, produce, and perform music actively.
-      </span>
-    </p>
-       </div>
-  </div>
-
-  <!-- SAĞ: GÖRSEL -->
-  <div class="col-12 col-md-6 text-center">
-    <div class="about-panel">
-    <img src="img/welcome-2.JPEG" class="img-fluid">
-  </div>
-</div>
+    </div>
 </div>
 
-                 <!-- BLOK 4 -->
-  <div class="row align-items-center mb-5">
-    <div class="col-12 col-md-6 order-md-2">
-        <div class="about-panel">
-      <p><span>Music has been a constant companion throughout my life, shaping both my personal and professional journey. Whether performing live, composing for games, or teaching, I strive to bring creativity, emotion, and dedication to every project I undertake.</span></p>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 order-md-1 text-center">
-     <div class="about-panel">
-      <img src="img/stuyo.jpg" class="img-fluid">
-    </div>
-  </div>
-  </div>
-    <!-- load JS -->
-    <script src="js/jquery-3.2.1.slim.min.js"></script>         <!-- https://jquery.com/ -->    
-    <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->  
-    <script src="js/anime.min.js"></script>                     <!-- http://animejs.com/ -->
-    <script src="js/main.js"></script>  
-        <script>
+<script src="js/jquery-3.2.1.slim.min.js"></script>    
+<script src="slick/slick.min.js"></script>  
+<script src="js/anime.min.js"></script>
+<script src="js/main.js"></script>
+<script>
 $(function(){
     $('.tm-current-year').text(new Date().getFullYear());
 });
-</script>          
-
-<!-- About Me sayfasının en altına ekle -->
-<div class="link-grid-container">
-  <a href="index.html" class="link-box">
-    <img src="img/home.png" class="link-icon" alt="Icon 1">
-    <span>Back to Home</span>
-  </a>
-  <a href="index.html" class="link-box">
-    <img src="img/icon2.gif" class="link-icon" alt="Icon 2">
-    <span>Compositions & Portfolio</span>
-  </a>
-  <a href="index.html" class="link-box">
-    <img src="img/icon3.gif" class="link-icon" alt="Icon 3">
-    <span>Live & Multimedia</span>
-  </a>
-  <a href="index.html" class="link-box">
-    <img src="img/icon9.png" class="link-icon" alt="Icon 4">
-    <span>Social Media & Contact</span>
-  </a>
-</div>
-
-<style>
-/* Grid container */
-.link-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin: 40px auto;
-  max-width: 1200px;
-  padding: 0 12px;
-}
-
-/* Kutular */
-.link-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.55); /* cam efekti */
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  color: rgb(255,140,0);
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  padding: 24px;
-  border-radius: 0px;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.link-box:hover {
-  background: rgba(76, 105, 141, 0.5);
-  color: white;
-  transform: translateY(-4px);
-}
-
-/* İkon stili */
-.link-icon {
-  width: 60px;
-  height: auto;
-  margin-bottom: 12px;
-}
-
-/* Mobilde responsive: 2x2 grid */
-@media (max-width: 768px) {
-  .link-grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin: 20px auto;
-  }
-
-  .link-box {
-    font-size: 18px;
-    padding: 18px;
-  }
-
-  .link-icon {
-    width: 50px;
-  }
-}
-
-/* Çok küçük ekranlarda (telefon) */
-@media (max-width: 480px) {
-  .link-grid-container {
-    grid-template-columns: 1fr; /* tek sütun üst üste */
-    gap: 12px;
-  }
-
-  .link-box {
-    font-size: 16px;
-    padding: 14px;
-  }
-
-  .link-icon {
-    width: 40px;
-  }
-}
-</style>
-
-</style>
-
-
+</script>
 </body>
-
 </html>
