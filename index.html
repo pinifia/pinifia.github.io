@@ -98,35 +98,30 @@
             gap: 8px;
         }
 
-        span {
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-            color: rgb(255,119,51);
-            padding: 2px 4px;
-            border-radius: 3px;
-            background-color: transparent;
-            background-image: linear-gradient(
-                to bottom,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255,255,255,1) 30%,
-                rgba(255,255,255,1) 70%,
-                rgba(255, 255, 255, 0) 100%
-            );
-            -webkit-mask-image: linear-gradient(
-                to right,
-                rgba(0,0,0,0) 0%,
-                rgba(0,0,0,1) 6px,
-                rgba(0,0,0,1) calc(100% - 6px),
-                rgba(0,0,0,0) 100%
-            );
-            mask-image: linear-gradient(
-                to right,
-                rgba(0,0,0,0) 0%,
-                rgba(0,0,0,1) 6px,
-                rgba(0,0,0,1) calc(100% - 6px),
-                rgba(0,0,0,0) 100%
-            );
-        }
+       .hero-box {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.6);   /* 👈 saydam beyaz */
+    backdrop-filter: blur(8px);            /* 👈 buzlu cam */
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.8);
+    color: rgb(255,119,51);
+
+    font-weight: bold;
+}
+.hero-title {
+    font-size: 46px;
+}
+        .hero-desc {
+    display: inline-block;   /* 👈 tüm metni TEK KUTU yapar */
+    font-size: 22px;
+    line-height: 1.5;
+    margin-top: 10px;
+    max-width: 100%;
+}
 
         @media (max-width: 768px) {
             .tm-site-header {
@@ -144,9 +139,13 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
                         <div class="tm-site-header">
-                            <h1 class="mb-4"><span>Pinifia</span></h1>
+                            <h1 class="mb-4">
+  <span class="hero-box hero-title">Pinifia</span>
+</h1>
                             <img src="img/underline.png" class="img-fluid mb-4">
-                            <p><span>Composer, singer, producer and music teacher open to collabs & projects</span></p>     
+                            <p class="hero-box hero-desc">
+  Composer, singer, producer and music teacher open to collabs & projects
+</p>
                         </div>                        
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -335,6 +334,7 @@
     </script>             
 </body>
 </html>
+
 
 
 
