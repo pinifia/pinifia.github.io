@@ -331,7 +331,7 @@ footer {
 }
 
 .tm-text-highlight {
-  color: white;
+  color: rgb(255,119,51);
 }
 .tm-text-highlight:hover {
   color: red;
@@ -435,6 +435,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
