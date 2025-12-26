@@ -322,16 +322,16 @@ p {
 
 /* Footer */
 footer {
-    position: absolute;       /* sayfanın altına yapışık */
-    bottom: 30px;             /* ekrandan 30px yukarda */
+    position: absolute;
+    bottom: 30px;
     text-align: center;
-    border: 1px solid white;  /* çerçeve */
-    border-radius: 0;         /* köşeler köşeli */
-    display: inline-block;    /* sadece içerik kadar genişlik */
-    padding: 10px 20px;       /* iç boşluk */
-    left: 50%;                /* ortalamak için */
-    transform: translateX(-50%); /* yatay ortalama */
-    background: transparent;  /* arka plan isteğe bağlı */
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 10px 20px;
+    background: transparent;
+
+    display: table;           /* içerik kadar genişlik */
+    margin: 0 auto;           /* yatay ortalama */
 }
 
 .tm-text-highlight {
@@ -439,6 +439,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
