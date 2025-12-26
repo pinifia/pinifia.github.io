@@ -8,11 +8,6 @@
 
     <title>Pinifia</title>
 
-    <!--
-    Template 2097 Pop
-    https://www.tooplate.com/view/2097-pop
-    -->
-
     <!-- load CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -22,129 +17,122 @@
     <link rel="stylesheet" href="css/tooplate-style.css">
 
     <script>
-        document.documentElement.className="js";
-        var supportsCssVars=function(){
-            var e,t=document.createElement("style");
-            return t.innerHTML="root: { --tmp-var: bold; }",
-            document.head.appendChild(t),
-            e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),
-            t.parentNode.removeChild(t),
-            e
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            t.innerHTML = "root: { --tmp-var: bold; }";
+            document.head.appendChild(t);
+            e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight","var(--tmp-var)"));
+            t.parentNode.removeChild(t);
+            return e;
         };
-        supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
+        supportsCssVars() || alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
     </script>
 
-    <!-- 🔥 SENİN EKLEDİĞİN STİLLER (EN ALTA) -->
+    <!-- Custom Styles -->
     <style>
-        /* BUTONLARIN NORMAL HALİ */
-        .product__bg {
-            background: rgba(255, 255, 255, 0.5);
+        body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+            font-family: 'Marck Script', cursive !important;
         }
 
-        /* BUTON ÜZERİNE GELİNCE */
+        p { font-size: 22px; }
+        h1 { font-size: 46px; }
+
+        body, p, h1, h2, h3, h4, h5, h6 {
+            line-height: 1.5;
+            color: rgb(255, 140, 0);
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .product__bg {
+            background: rgba(255, 255, 255, 0.6) !important;
+            opacity: 1 !important;
+            transform: none !important;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+        }
+
         .product:hover .product__bg {
             background: rgba(0, 74, 159, 0.5);
         }
 
-        /* TÜM YAZILARIN ARKA PLANI */
-       body, p, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Marck Script', cursive;
-    p {font-size: 22px;}
-    h1 {font-size: 46px;}
-    line-height: 1.5;
-    color: rgb(255, 140, 0);                /* turuncu yazı */
-    font-weight: bold;                       /* kalın yazı */
-    background-color: rgba(255, 255, 255, 0); /* yarı saydam beyaz arka plan */
-    padding: 8px 12px;
-    border-radius: 6px;
-    }
-        .product__bg {
-    background: rgba(255, 255, 255, 0.6) !important;
-    opacity: 1 !important;
-    transform: none !important;
-    position: absolute;   /* kutuyu sabitle */
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 0;           /* yazının arkasında */
-    }
-.tm-site-header {
-    background-position: center center;
-    background-size: cover;
-}
-         .tm-nav-icon {
-    width: 40%;           /* GIF genişliği */
-    height: auto;         /* yüksekliği orantılı */
-    display: block;       /* block olarak kalmalı */
-    margin: 0 auto;       /* yatayda ortalar */
-    object-fit: contain;  /* GIF’in tamamı görünür */
-    z-index: 1;           /* yazının arkasında */
-}
-.tm-nav-text {   
-    font-family: 'Marck Script', cursive !important; /* Marck Script uygulanır */
-    position: relative;
-    line-height: 1.2;
-    font-weight: bold;       /* bold */
-    font-size: 20px;         /* yazı boyutu */
-    margin-top: 8px;         /* GIF ile yazı arası boşluk */
-    z-index: 2;
-    top: 0;                  /* yukarı kaymayı engelle */
-    color: rgb(255, 140, 0);
-    background-color: rgba(255, 255, 255, 0.5); /* yarı saydam kutu */
-    padding: 6px 6px;
-    border-radius: 4px;
-}
-.tm-nav-link:hover .tm-nav-text {
-    color: rgb(255, 140, 0);
-    background-color: rgba(255, 255, 255, 0.5); /* hover’da da aynı */
-    gap: 8px;                    /* GIF ile yazı arası boşluk */
-}
+        .tm-site-header {
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .tm-nav-icon {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            z-index: 1;
+        }
+
+        .tm-nav-text {   
+            font-family: 'Marck Script', cursive !important;
+            position: relative;
+            line-height: 1.2;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 8px;
+            z-index: 2;
+            top: 0;
+            color: rgb(255, 140, 0);
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 6px 6px;
+            border-radius: 4px;
+        }
+
+        .tm-nav-link:hover .tm-nav-text {
+            color: rgb(255, 140, 0);
+            background-color: rgba(255, 255, 255, 0.5);
+            gap: 8px;
+        }
+
         span {
-  /* SATIR SATIR AYRI KUTU OLSUN */
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            color: rgb(255, 140, 0);
+            padding: 2px 4px;
+            border-radius: 3px;
+            background-color: transparent;
+            background-image: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255,255,255,1) 30%,
+                rgba(255,255,255,1) 70%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            -webkit-mask-image: linear-gradient(
+                to right,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,1) 6px,
+                rgba(0,0,0,1) calc(100% - 6px),
+                rgba(0,0,0,0) 100%
+            );
+            mask-image: linear-gradient(
+                to right,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,1) 6px,
+                rgba(0,0,0,1) calc(100% - 6px),
+                rgba(0,0,0,0) 100%
+            );
+        }
 
-  /* GÖRSEL AYARLAR */
-  color: rgb(255, 140, 0);
-  padding: 2px 4px;
-  border-radius: 3px;
-
-  /* DÜZ RENK YERİNE GRADIENT */
-  background-color: transparent;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255,255,255,1) 30%,
-    rgba(255,255,255,1) 70%,
-    rgba(255, 255, 255, 0) 100%
-  );
-           
-  /* SAĞ-SOL KENAR FADE (çok kısa, yazı hemen başlar) */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,1) 6px,
-    rgba(0,0,0,1) calc(100% - 6px),
-    rgba(0,0,0,0) 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,1) 6px,
-    rgba(0,0,0,1) calc(100% - 6px),
-    rgba(0,0,0,0) 100%
-  );
-}
-button, input, select, textarea {
-    font-family: 'Marck Script', cursive !important;
-  }
-@media (max-width: 768px) {
-    .tm-site-header {
-        background-position: left center;
-    }
-}
+        @media (max-width: 768px) {
+            .tm-site-header {
+                background-position: left center;
+            }
+        }
     </style>
 </head>
-
 
 <body>
     <div id="tm-bg"></div>
@@ -152,22 +140,21 @@ button, input, select, textarea {
         <div class="tm-main-content">
             <div class="container tm-site-header-container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
                         <div class="tm-site-header">
                             <h1 class="mb-4"><span>Pinifia</span></h1>
                             <img src="img/underline.png" class="img-fluid mb-4">
-                           <p>
-  <span>Composer, singer, producer and music teacher open to collabs & projects</span>
-</p>     
+                            <p><span>Composer, singer, producer and music teacher open to collabs & projects</span></p>     
                         </div>                        
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <div class="content">
                             <div class="grid">
+                                <!-- About Me -->
                                 <div class="grid__item" id="home-link">
                                     <div class="product">
                                         <div class="tm-nav-link">
-    <img src="img/icon13.png" class="tm-nav-icon" alt="Home Icon">
+                                            <img src="img/icon13.png" class="tm-nav-icon" alt="Home Icon">
                                             <span class="tm-nav-text">About Me</span>
                                             <div class="product__bg"></div>        
                                         </div>                                    
@@ -189,15 +176,15 @@ button, input, select, textarea {
                                                     <img src="img/welcome-2.jpg" class="img-fluid">
                                                 </div>                                        
                                             </div>
-                   
                                         </div>
                                     </div>
                                 </div>
 
+                                <!-- Compositions & Portfolio -->
                                 <div class="grid__item" id="team-link">
                                     <div class="product">
                                         <div class="tm-nav-link">
-                                           <img src="img/icon2.gif" class="tm-nav-icon" alt="Home Icon">
+                                           <img src="img/icon2.gif" class="tm-nav-icon" alt="Portfolio Icon">
                                             <span class="tm-nav-text">Compositions & Portfolio</span>
                                             <div class="product__bg"></div>            
                                         </div>                                     
@@ -224,10 +211,11 @@ button, input, select, textarea {
                                     </div>
                                 </div>
 
+                                <!-- Live & Multimedia -->
                                 <div class="grid__item">
                                     <div class="product">
                                         <div class="tm-nav-link">
-                                             <img src="img/icon3.gif" class="tm-nav-icon" alt="Home Icon">
+                                            <img src="img/icon3.gif" class="tm-nav-icon" alt="Live Icon">
                                             <span class="tm-nav-text">Live & Multimedia</span>
                                             <div class="product__bg"></div>             
                                         </div>                                                                 
@@ -262,10 +250,11 @@ button, input, select, textarea {
                                     </div>
                                 </div>
 
+                                <!-- Social Media & Contact -->
                                 <div class="grid__item">
                                     <div class="product">
                                         <div class="tm-nav-link">
-                                                <img src="img/icon9.png" class="tm-nav-icon" alt="Home Icon">
+                                            <img src="img/icon9.png" class="tm-nav-icon" alt="Contact Icon">
                                             <span class="tm-nav-text">Social Media & Contact</span>
                                             <div class="product__bg"></div>             
                                         </div>                                                              
@@ -303,57 +292,44 @@ button, input, select, textarea {
                                         </div>
                                     </div>
                                 </div>
+
                             </div> 
                         </div>                       
                     </div>
                 </div>                
             </div>
-         </div> <!-- .tm-main-content -->  
+         </div>
     </div>
-    <!-- load JS -->
-    <script src="js/jquery-3.2.1.slim.min.js"></script>         <!-- https://jquery.com/ -->    
-    <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->  
-    <script src="js/anime.min.js"></script>                     <!-- http://animejs.com/ -->
-    <script src="js/main.js"></script>  
-    <script>      
 
+    <!-- load JS -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/main.js"></script>  
+
+    <script>
         function setupFooter() {
             var pageHeight = $('.tm-site-header-container').height() + $('footer').height() + 100;
-
             var main = $('.tm-main-content');
-
             if($(window).height() < pageHeight) {
                 main.addClass('tm-footer-relative');
-            }
-            else {
+            } else {
                 main.removeClass('tm-footer-relative');   
             }
         }
 
-        /* DOM is ready
-        ------------------------------------------------*/
         $(function(){
-
             setupFooter();
-
             $(window).resize(function(){
                 setupFooter();
             });
-
-            $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
+            $('.tm-current-year').text(new Date().getFullYear());
         });
-    // home-link içindeki tm-nav-link tıklamasını yakala
-    document.querySelector('#home-link .tm-nav-link').addEventListener('click', function(e){
-        e.stopPropagation(); // mevcut popup JS tetiklenmesin
-        window.location.href = 'aboutme.html'; // yönlendirme
-    });
-    </script>             
 
+        document.querySelector('#home-link .tm-nav-link').addEventListener('click', function(e){
+            e.stopPropagation();
+            window.location.href = 'aboutme.html';
+        });
+    </script>             
 </body>
 </html>
-
-
-
-
-
-
