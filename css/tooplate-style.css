@@ -85,22 +85,34 @@ p {
 .tm-nav li {
   list-style: none;
   display: inline-block;
-  border: 0px transparent;
+  border: 1px solid rgba(255, 255, 255, 1);
   float: left;
   margin: 10px;
 }
 
 .tm-nav-link {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 165px;
-  height: 165px;
-  text-align: center;
-  border: 0px transparent;
-  cursor: pointer;
-  position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 165px;
+    height: 165px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.8); /* ince beyaz çerçeve */
+    cursor: pointer;
+    position: relative;
+
+    /* Buzlu cam efekti */
+    background: rgba(255, 255, 255, 0.2); /* yarı saydam */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 6px; /* isteğe göre köşeler */
+    transition: all 0.3s ease; /* hover animasyonu için */
+}
+
+.tm-nav-link:hover {
+    background: rgba(255, 140, 0, 0.3); /* üstüne gelince renk değişimi, buzlu kalır */
+    color: rgba(255, 255, 255, 1); /* yazı rengi hover */
 }
 
 .tm-nav-text {
@@ -422,6 +434,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
