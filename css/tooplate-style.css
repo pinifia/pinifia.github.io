@@ -322,13 +322,14 @@ p {
 
 /* Footer */
 footer {
-  position: absolute;
-  bottom: 30px;
-  text-align: center;
-  left: 0;
-  right: 0;
-  border-radius: 0;
-  border: 1px solid white;
+    position: relative;      /* normal akışta */
+    display: inline-block;   /* sadece içerik kadar genişlik */
+    padding: 10px 20px;      /* iç boşluk */
+    margin: 20px auto;       /* ortalamak için */
+    text-align: center;
+    border: 1px solid white; /* çerçeve */
+    border-radius: 0;        /* köşeler köşeli */
+    background: transparent; /* istersen renk ekleyebilirsin */
 }
 
 .tm-text-highlight {
@@ -436,6 +437,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
