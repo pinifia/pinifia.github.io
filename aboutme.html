@@ -40,6 +40,28 @@
         }
         p { font-size: 20px; }
         h1 { font-size: 46px; }
+       
+        body * {
+  position: relative;
+}
+
+body *::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1.15em;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 230, 150, 0),
+    rgba(255, 230, 150, 1),
+    rgba(255, 230, 150, 0)
+  );
+  z-index: -1;
+  pointer-events: none;
+}
 
         /* BUTON & ÜZERİNE GELİNCE */
         .product__bg {
