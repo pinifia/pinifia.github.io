@@ -31,151 +31,92 @@
 
     <!-- Custom Styles -->
     <style>
-        body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
-            font-family: 'Marck Script', cursive !important;
-        }
+        /* =========================
+   GENEL FONT & YAZI
+   ========================= */
+body, p, h1, h2, h3, h4, h5, h6, button {
+  font-family: 'Marck Script', cursive !important;
+  color: rgb(255,119,51);
+  font-weight: bold;
+}
 
-        p { font-size: 22px; }
-        h1 { font-size: 46px; }
+p { font-size: 22px; }
+h1 { font-size: 46px; }
 
-        body, p, h1, h2, h3, h4, h5, h6 {
-            line-height: 1.5;
-            color: rgb(255,119,51);
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0);
-            padding: 8px 12px;
-            border-radius: 6px;
-        }
-
-
+/* =========================
+   NAV / BUTON CAM ARKAPLAN
+   ========================= */
 .product__bg {
-  background: rgba(255,255,255,0.6); /* normalde buzlu cam */
-  opacity: 1;
-  transform: none;
+  background: rgba(255,255,255,0.6);
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  inset: 0;
   z-index: 0;
-  transition: all 0.3s ease; /* smooth geçiş */
+  transition: background 0.3s ease;
 }
-        
-        .product:hover .product__bg {
-  background: rgba(255,255,255,0.5); /* hover rengi */
+
+.product:hover .product__bg {
+  background: rgba(255,255,255,0.5);
 }
-        .tm-site-header {
-            background-position: center center;
-            background-size: cover;
-        }
 
-        .tm-nav-icon {
-            width: 40%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            object-fit: contain;
-            z-index: 1;
-        }
-
-        .tm-nav-text {   
-            font-family: 'Marck Script', cursive !important;
-            position: relative;
-            line-height: 1.2;
-            font-weight: bold;
-            font-size: 20px;
-            margin-top: 8px;
-            z-index: 2;
-            top: 0;
-            color: rgb(255,119,51);
-            background-color: transparent;
-            padding: 6px 6px;
-            border-radius: 4px;
-        }
-
-
-        .tm-nav-link:hover .tm-nav-text {
-            color: rgb(255,119,51);
-            background-color: transparent;
-            gap: 8px;
-        }
-
-.hero-text-glass p {
-  position: relative;
-  display: inline-block;
-
-  color: rgb(255,119,51); /* yazı aynen */
-  font-weight: 600;
+.tm-nav-icon {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
   z-index: 1;
 }
 
-.hero-text-glass p::before {
-  content: "";
-  position: absolute;
-  inset: -80% -60%;   /* 💥 IŞIK TAŞMASI */
-  z-index: -1;
-
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255,255,255,1) 0%,
-    rgba(255,255,255,1) 25%,
-    rgba(255,255,255,0.9) 45%,
-    rgba(255,255,255,0.6) 65%,
-    rgba(255,255,255,0.3) 80%,
-    rgba(255,255,255,0) 100%
-  );
-
-  pointer-events: none;
+.tm-nav-text {
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  background: transparent;
+  padding: 6px;
 }
 
-        
-span {
-  display: inline;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-
-  padding: 6px 10px;
-  margin: 2px 0;
-  line-height: 1.6;
-
-  color: rgb(255,119,51);
-
-  /* 🧊 BUTONLARLA AYNI BUZLU CAM */
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-
-  /* ⬜ 1px beyaz çerçeve */
-  border: 1px solid rgba(255, 255, 255, 0.9);
-
-  /* ❌ yuvarlak istemiyoruz */
-  border-radius: 0;
-}
-
-        @media (max-width: 768px) {
-            .tm-site-header {
-                background-position: left center;
-            }
-        }
-        
- .hero-text-glass {
-  display: inline-block;   /* 🔥 kutu yazı kadar olsun */
-  padding: 6px 10px;       /* 🔥 sıkı kutu */
+/* =========================
+   HERO – TEK CAM KUTU
+   ========================= */
+.hero-text-glass {
+  display: inline-block;
+  padding: 8px 14px;
   margin-top: 8px;
 
-  background: rgba(255, 255, 255, 0.45); /* biraz daha hafif cam */
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.9);
   border-radius: 0;
 }
 
 .hero-text-glass p {
+  margin: 0;
+  color: rgb(255,119,51);
+  font-weight: 600;
+
+  /* güçlü ama yazıyı inceltmez */
   text-shadow:
     0 0 2px rgba(255,255,255,1),
-    0 0 6px rgba(255,255,255,0.9),
-    0 0 12px rgba(255,255,255,0.6),
-    0 0 20px rgba(255,255,255,0.3);
+    0 0 6px rgba(255,255,255,0.7);
 }
+
+/* =========================
+   SPAN – DİĞER SAYFALAR İÇİN
+   ========================= */
+span {
+  display: inline;
+  padding: 6px 10px;
+  line-height: 1.6;
+
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 0;
+}
+
+/* HERO İÇİNDE SPAN CAM OLMASIN */
+.hero-text-glass span {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
     </style>
 </head>
 
@@ -380,6 +321,7 @@ span {
     </script>             
 </body>
 </html>
+
 
 
 
