@@ -47,21 +47,23 @@
             border-radius: 6px;
         }
 
-        .product__bg {
-            background: rgba(255, 255, 255, 0.6) !important;
-            opacity: 1 !important;
-            transform: none !important;
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 0;
-        }
-
-        .product:hover .product__bg {
-    background: rgba(219,105,63,0.5) !important; /* tam kırmızı, opak */
-    opacity: 1 !important; /* önemli! */
+      .product__bg {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 1 !important;
+    transform: none !important;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+    border-radius: 8px;
+    transition: background 0.3s ease;
 }
 
+.product:hover .product__bg {
+    background: rgba(255, 255, 255, 0.6);
+}
         .tm-site-header {
             background-position: center center;
             background-size: cover;
@@ -335,6 +337,7 @@
     </script>             
 </body>
 </html>
+
 
 
 
