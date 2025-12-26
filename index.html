@@ -31,92 +31,108 @@
 
     <!-- Custom Styles -->
     <style>
-        /* =========================
-   GENEL FONT & YAZI
-   ========================= */
-body, p, h1, h2, h3, h4, h5, h6, button {
-  font-family: 'Marck Script', cursive !important;
-  color: rgb(255,119,51);
-  font-weight: bold;
-}
+        body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+            font-family: 'Marck Script', cursive !important;
+        }
 
-p { font-size: 22px; }
-h1 { font-size: 46px; }
+        p { font-size: 22px; }
+        h1 { font-size: 46px; }
 
-/* =========================
-   NAV / BUTON CAM ARKAPLAN
-   ========================= */
+        body, p, h1, h2, h3, h4, h5, h6 {
+            line-height: 1.5;
+            color: rgb(255,119,51);
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+
 .product__bg {
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.6); /* normalde buzlu cam */
+  opacity: 1;
+  transform: none;
   position: absolute;
-  inset: 0;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   z-index: 0;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease; /* smooth geçiş */
 }
-
-.product:hover .product__bg {
-  background: rgba(255,255,255,0.5);
+        
+        .product:hover .product__bg {
+  background: rgba(219,105,63,0.5); /* hover rengi */
 }
+        .tm-site-header {
+            background-position: center center;
+            background-size: cover;
+        }
 
-.tm-nav-icon {
-  width: 40%;
-  margin: 0 auto;
-  display: block;
-  z-index: 1;
-}
+        .tm-nav-icon {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            z-index: 1;
+        }
 
-.tm-nav-text {
-  position: relative;
-  z-index: 2;
-  font-size: 20px;
-  background: transparent;
-  padding: 6px;
-}
+        .tm-nav-text {   
+            font-family: 'Marck Script', cursive !important;
+            position: relative;
+            line-height: 1.2;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 8px;
+            z-index: 2;
+            top: 0;
+            color: rgb(255,119,51);
+            background-color: transparent;
+            padding: 6px 6px;
+            border-radius: 4px;
+        }
 
-/* =========================
-   HERO – TEK CAM KUTU
-   ========================= */
-.hero-text-glass {
-  display: inline-block;
-  padding: 8px 14px;
-  margin-top: 8px;
 
-  background: rgba(255,255,255,0.55);
-  border: 1px solid rgba(255,255,255,0.9);
-  border-radius: 0;
-}
+        .tm-nav-link:hover .tm-nav-text {
+            color: rgb(255,119,51);
+            background-color: transparent;
+            gap: 8px;
+        }
 
-.hero-text-glass p {
-  margin: 0;
-  color: rgb(255,119,51);
-  font-weight: 600;
+        span {
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            color: rgb(255,119,51);
+            padding: 2px 4px;
+            border-radius: 3px;
+            background-color: transparent;
+            background-image: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255,255,255,1) 30%,
+                rgba(255,255,255,1) 70%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            -webkit-mask-image: linear-gradient(
+                to right,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,1) 6px,
+                rgba(0,0,0,1) calc(100% - 6px),
+                rgba(0,0,0,0) 100%
+            );
+            mask-image: linear-gradient(
+                to right,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,1) 6px,
+                rgba(0,0,0,1) calc(100% - 6px),
+                rgba(0,0,0,0) 100%
+            );
+        }
 
-  /* güçlü ama yazıyı inceltmez */
-  text-shadow:
-    0 0 2px rgba(255,255,255,1),
-    0 0 6px rgba(255,255,255,0.7);
-}
-
-/* =========================
-   SPAN – DİĞER SAYFALAR İÇİN
-   ========================= */
-span {
-  display: inline;
-  padding: 6px 10px;
-  line-height: 1.6;
-
-  background: rgba(255,255,255,0.55);
-  border: 1px solid rgba(255,255,255,0.9);
-  border-radius: 0;
-}
-
-/* HERO İÇİNDE SPAN CAM OLMASIN */
-.hero-text-glass span {
-  background: none;
-  border: none;
-  padding: 0;
-}
-
+        @media (max-width: 768px) {
+            .tm-site-header {
+                background-position: left center;
+            }
+        }
     </style>
 </head>
 
@@ -130,9 +146,7 @@ span {
                         <div class="tm-site-header">
                             <h1 class="mb-4"><span>Pinifia</span></h1>
                             <img src="img/underline.png" class="img-fluid mb-4">
-                            <div class="hero-text-glass">
-                            <p>Composer, singer, producer and music teacher open to collabs & projects</p>    
-                            </div>
+                            <p><span>Composer, singer, producer and music teacher open to collabs & projects</span></p>     
                         </div>                        
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -321,35 +335,6 @@ span {
     </script>             
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
