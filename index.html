@@ -70,6 +70,30 @@
         0 0 12px rgba(255,255,255,0.25),
         0 0 13px rgba(255,255,255,0.12);
 }
+        .glow-layer {
+    position: relative;
+    z-index: 1;
+}
+        .glow-layer::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    color: white;
+    opacity: 0.9;
+
+    filter: blur(6px);
+    transform: scale(1.05);
+
+    pointer-events: none;
+}
+        .glow-layer {
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.6),
+        0 0 14px rgba(255,255,255,0.35),
+        0 0 26px rgba(255,255,255,0.18);
+}
 
         .tm-site-header {
             background-position: center center;
@@ -156,10 +180,13 @@
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
                         <div class="tm-site-header">
                             <h1 class="mb-4">
-  <span class="hero-box hero-title soft-white-glow">Pinifia</span>
+  <span class="hero-box hero-title glow-layer" data-text="Pinifia">
+  Pinifia
+</span>
 </h1>
                             <img src="img/underline.png" class="img-fluid mb-4">
-                            <p class="hero-box hero-desc soft-white-glow">
+                            <p class="hero-box hero-desc glow-layer"
+   data-text="Composer, singer, producer and music teacher open to collabs & projects">
   Composer, singer, producer and music teacher open to collabs & projects
 </p>
                         </div>                        
@@ -350,6 +377,7 @@
     </script>             
 </body>
 </html>
+
 
 
 
