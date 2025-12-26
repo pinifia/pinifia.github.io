@@ -327,6 +327,7 @@ footer {
   text-align: center;
   left: 0;
   right: 0;
+  border-radius: 0;
 }
 
 .tm-text-highlight {
@@ -434,6 +435,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
