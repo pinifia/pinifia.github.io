@@ -104,9 +104,9 @@ p {
 
     /* Buzlu cam efekti */
     background: rgba(255, 255, 255, 0.2); /* yarı saydam */
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border-radius: 6px; /* isteğe göre köşeler */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 0px; /* isteğe göre köşeler */
     transition: all 0.3s ease; /* hover animasyonu için */
 }
 
@@ -434,6 +434,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
