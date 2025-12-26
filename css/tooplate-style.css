@@ -85,7 +85,7 @@ p {
 .tm-nav li {
   list-style: none;
   display: inline-block;
-  border: 1px solid white;
+  border: 0px transparent;
   float: left;
   margin: 10px;
 }
@@ -98,7 +98,7 @@ p {
   width: 165px;
   height: 165px;
   text-align: center;
-  border: 1px solid white;
+  border: 0px transparent;
   cursor: pointer;
   position: relative;
 }
@@ -422,6 +422,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
