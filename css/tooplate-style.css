@@ -98,12 +98,12 @@ p {
     width: 165px;
     height: 165px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.8); /* ince beyaz çerçeve */
+    border: 0px solid rgba(255, 255, 255, 0.8); /* ince beyaz çerçeve */
     cursor: pointer;
     position: relative;
 
     /* Buzlu cam efekti */
-    background: rgba(255, 255, 255, 0.2); /* yarı saydam */
+    background: rgba(255, 255, 255, 0); /* yarı saydam */
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     border-radius: 0px; /* isteğe göre köşeler */
@@ -434,6 +434,7 @@ p:last-child {
     background-position: 27% center !important;
   }
 }
+
 
 
 
