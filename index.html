@@ -126,6 +126,28 @@ span {
                 background-position: left center;
             }
         }
+        
+        .hero-text-glass {
+  padding: 18px 22px;
+  margin-top: 12px;
+
+  /* 🧊 Anasayfa butonlarıyla aynı buzlu cam */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  /* ⬜ 1px beyaz çerçeve */
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  /* köşeler keskin */
+  border-radius: 0;
+}
+
+.hero-text-glass p {
+  margin: 0;           /* ekstra boşlukları sıfırla */
+  color: rgb(44,69,105);
+}
+
     </style>
 </head>
 
@@ -139,7 +161,9 @@ span {
                         <div class="tm-site-header">
                             <h1 class="mb-4"><span>Pinifia</span></h1>
                             <img src="img/underline.png" class="img-fluid mb-4">
-                            <p><span>Composer, singer, producer and music teacher open to collabs & projects</span></p>     
+                            <div class="hero-text-glass">
+                            <p>Composer, singer, producer and music teacher open to collabs & projects</p>    
+                            </div>
                         </div>                        
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -328,6 +352,7 @@ span {
     </script>             
 </body>
 </html>
+
 
 
 
