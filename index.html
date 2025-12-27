@@ -439,13 +439,33 @@
             $('.tm-current-year').text(new Date().getFullYear());
         });
 
-        document.querySelector('#home-link .tm-nav-link').addEventListener('click', function(e){
-            e.stopPropagation();
-            window.location.href = 'aboutme.html';
-        });
+document.querySelector('#home-link .tm-nav-link').addEventListener('click', function(e){
+    e.stopPropagation();
+    window.location.href = 'aboutme.html';
+});
+
+// Compositions & Portfolio
+document.querySelector('#team-link .tm-nav-link').addEventListener('click', function(e){
+    e.stopPropagation();
+    window.location.href = 'portfolio.html';
+});
+
+// Live & Multimedia
+document.querySelectorAll('.grid__item')[2].querySelector('.tm-nav-link').addEventListener('click', function(e){
+    e.stopPropagation();
+    window.location.href = 'multimedia.html';
+});
+
+// Social Media & Contact
+document.querySelectorAll('.grid__item')[3].querySelector('.tm-nav-link').addEventListener('click', function(e){
+    e.stopPropagation();
+    window.location.href = 'contact.html';
+});
+        
     </script>             
 </body>
 </html>
+
 
 
 
