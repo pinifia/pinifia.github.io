@@ -202,59 +202,6 @@ span {
     .link-icon{ width:40px; }
 }
 .link-box:hover span{ color: rgb(223, 100, 39); }
-      
-        /* Üst link grid responsive mobil görünümü */
-@media (max-width: 768px) {
-    .top-link-grid {
-        flex-direction: column !important;   /* alt alta diz */
-        align-items: center;                 /* ortala */
-        gap: 12px;                           /* kutular arası boşluk */
-    }
-    .top-link-grid .link-box {
-        flex: 0 1 100% !important;           /* tam genişlik */
-        max-width: 100% !important;
-        padding: 14px;                        /* alt linklerle aynı padding */
-        font-size: 16px;                      /* alt linklerle aynı yazı boyutu */
-    }
-    .top-link-grid .link-icon {
-        width: 40px !important;               /* alt linklerdeki ikon boyutu */
-    }
-}
-/* Masaüstü görünüm */
-.top-link-grid {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.top-link-grid .link-box {
-    flex: 0 1 33.333%;       /* 3 sütun eşit */
-    max-width: 33.333%;
-    text-align: center;
-}
-
-/* Mobil görünüm */
-@media (max-width: 768px) {
-    .top-link-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-    .top-link-grid .link-box {
-        flex: 0 1 100%;        /* tam genişlik */
-        max-width: 400px;      /* alt linklerle aynı maksimum genişlik */
-        padding: 14px;         /* alt linkler ile uyumlu padding */
-        font-size: 16px;       /* alt linkler ile uyumlu yazı boyutu */
-        box-sizing: border-box;
-    }
-    .top-link-grid .link-icon {
-        width: 40px;           /* alt linklerle uyumlu ikon boyutu */
-        height: auto;
-    }
-}
-
-
 </style>
 </head>
 
@@ -273,21 +220,22 @@ span {
     </div>
 </div>
 
-<!-- ÜST LINK GRID (3 kutu) -->
-<div class="top-link-grid">
-    <a href="portfolio.html" class="link-box">
-        <img src="img/icon2.gif" class="link-icon" alt="Icon 2">
-        <span>Compositions & Portfolio</span>
-    </a>
-    <a href="multimedia.html" class="link-box">
-        <img src="img/icon3.gif" class="link-icon" alt="Icon 3">
-        <span>Live & Multimedia</span>
-    </a>
-    <a href="contact.html" class="link-box">
-        <img src="img/icon9.png" class="link-icon" alt="Icon 4">
-        <span>Social Media & Contact</span>
-    </a>
-</div>
+            <!-- ÜST LINK GRID (3 kutu, alttakilerle aynı boyutta, ortalanmış) -->
+            <div style="display:flex; justify-content:center; gap:16px; margin-top:20px; margin-bottom:40px; flex-wrap:wrap;">
+                <a href="portfolio.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+                    <img src="img/icon2.gif" class="link-icon" alt="Icon 2">
+                    <span>Compositions & Portfolio</span>
+                </a>
+                <a href="multimedia.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+                    <img src="img/icon3.gif" class="link-icon" alt="Icon 3">
+                    <span>Live & Multimedia</span>
+                </a>
+                <a href="contact.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+                    <img src="img/icon9.png" class="link-icon" alt="Icon 4">
+                    <span>Social Media & Contact</span>
+                </a>
+            </div>
+
             <!-- BLOK 1 -->
             <div class="row align-items-center mb-5">
                 <div class="col-12 col-md-6">
