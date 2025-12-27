@@ -4,6 +4,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,7 +44,8 @@
         }
         p { font-size: 20px; }
         h1 { font-size: 46px; }
-       
+
+        
         /* BUTON & ÜZERİNE GELİNCE */
         .product__bg {
             background: rgba(255, 255, 255, 0.6);
@@ -239,6 +242,44 @@ span {
         height: auto;
     }
 }
+ .pixel-paragraph {
+    font-family: 'Pixelify Sans', sans-serif !important;
+    font-size: 22px; /* ihtiyacına göre ayarla */
+    font-weight: 500;
+    color: rgb(99,127,148, 1);
+    display: inline-block; /* link-box arka planını bozmaz */
+    text-align: center;
+        /* Glow efekti */
+    text-shadow:
+        0 1px 1px rgba(255,255,255,0.95),
+        0 2px 2px rgba(255,255,255,0.65),
+        0 3px 3px rgba(255,255,255,0.4), 
+        0 0 6px  rgba(255,255,255,1),
+        0 0 8px  rgba(255,255,255,0.90),
+        0 0 10px rgba(255,255,255,0.45),
+        0 0 12px rgba(255,255,255,0.25),
+        0 0 13px rgba(255,255,255,0.12);
+}
+
+.pixel-paragraph-h1 {
+    font-family: 'Pixelify Sans', sans-serif !important;
+    font-weight: 500;
+    font-size: 48px;
+          /* Glow efekti */
+    text-shadow:
+        0 1px 1px rgba(255,255,255,0.95),
+        0 2px 2px rgba(255,255,255,0.65),
+        0 3px 3px rgba(255,255,255,0.4), 
+        0 0 6px  rgba(255,255,255,1),
+        0 0 8px  rgba(255,255,255,0.90),
+        0 0 10px rgba(255,255,255,0.45),
+        0 0 12px rgba(255,255,255,0.25),
+        0 0 13px rgba(255,255,255,0.12);
+}
+.courier-text-bold {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700; /* bold */
+}
 </style>
 </head>
 
@@ -259,9 +300,9 @@ span {
 
           <!-- ÜST LINK GRID -->
 <div class="top-link-grid">
-    <a href="portfolio.html" class="link-box">
+            <a href="portfolio.html" class="link-box">
         <img src="img/icon14.png" class="link-icon icon14-large" alt="Icon 2">
-        <span>Game Music</span>
+        <span class="pixel-paragraph">Game Music</span>
     </a>
     <a href="multimedia.html" class="link-box">
         <img src="img/icon13.png" class="link-icon" alt="Icon 3">
@@ -269,7 +310,7 @@ span {
     </a>
     <a href="contact.html" class="link-box">
         <img src="img/icon15.png" class="link-icon" alt="Icon 4">
-        <span>Jingles & Miscellaneous</span>
+        <span class="courier-text-bold">Jingles & Miscellaneous</span>
     </a>
 </div>
 
@@ -278,12 +319,17 @@ span {
                 <div class="col-12 col-md-6">
                     <div class="about-text">
                         <div class="about-panel">
-                            <h1 class="mb-4"><span>Game Music</span></h1>
+                            <h1 class="mb-4"><p class="pixel-paragraph-h1">Game Music</p></h1>
                             <img src="img/underline.png" class="img-fluid mb-4">
-                            <p><span>
-                                I have been an active gamer since my childhood, and during my university years, after building a strong network in this field, I started to focus on improving my music skills for games through participating in game jams, alongside freelance work. Later, I collaborated with Tonguç Bodur on some Steam games; Pluviophile and Chionophile, and worked full-time at Zonex Entertainment Studios composing music. I’m still passionate about creating music for games, eager to keep growing in this field, and open to all kinds of exciting projects. 
-                            </span></p>
-                            <p><span>Below, you can find some of my work from various projects. </span></p>
+                            <p class="pixel-paragraph">
+    I have been an active gamer since my childhood, and during my university years, after building a strong network in this field, I started to focus on improving my music skills for games through participating in game jams, alongside freelance work. Later, I collaborated with Tonguç Bodur on some Steam games; Pluviophile and Chionophile, and worked full-time at Zonex Entertainment Studios composing music. I’m still passionate about creating music for games, eager to keep growing in this field, and open to all kinds of exciting projects.
+</p>
+
+<p class="pixel-paragraph">
+    Below, you can find some of my work from various projects.
+</p>
+
+
                         </div>
                     </div>
                 </div>
