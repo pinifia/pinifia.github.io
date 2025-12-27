@@ -143,7 +143,6 @@ span {
 
 .tm-site-header { background-position:center center; background-size:cover; }
 @media (max-width:768px){ .tm-site-header { background-position:left center; } }
-
 @media (max-width:768px){ .about-panel{ padding:18px; } }
 @media (max-width:576px){
     .tm-site-header-container { padding-left:4px; padding-right:4px; margin-top:20px !important; }
@@ -155,12 +154,30 @@ span {
 .video-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 56.25%;
+    padding-top: 0;
 }
-.video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0; }
+
+.video-wrapper.h-300 {
+    height: 300px;
+}
+
+.video-wrapper.h-450 {
+    height: 450px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
 .about-panel .video-wrapper:not(:last-child) {
     margin-bottom: 20px;
 }
+
 
 .link-grid-container{
     display:grid;
@@ -356,7 +373,7 @@ span {
     <!-- SoundCloud iframe kolonu -->
     <div class="col-12 col-md-6 order-md-1 text-center">
         <div class="about-panel">
-            <div class="video-wrapper">
+            <div class="video-wrapper h-300">
                 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162825183&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                 </iframe>
@@ -370,34 +387,52 @@ span {
 </div>
 
 
-            <!-- BLOK 3 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-12 col-md-6">
-                    <div class="about-panel">
-                        <p><span>From my second year onward, I began working as a freelance composer, creating original music for various projects. Additionally, I participated in game jams as a musician, which allowed me to expand my skills in game music composition, sound design, and sound effects, greatly broadening my creative and technical horizons.</span></p>
-                        <p><span>After graduating at the top of my class, I joined Zonex Entertainment Studios as a composer, where I focused on creating music for games. Later, I spent two years teaching music at an international school. Currently, I teach chemistry at another international school while continuing to compose, produce, and perform music actively.</span></p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 text-center">
-                    <div class="about-panel">
-                        <img src="img/welcome-2.JPEG" class="img-fluid">
-                    </div>
-                </div>
-            </div>
+ <!-- BLOK 3 -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Continuing with Slime Spy—actually, Slime Spy 2 (the first one never really got published) was a game I worked on while I was the only musician at Zonex Entertainment Studios. I did my best to collaborate with my teammates to make the music really reflect how players feel. And in the end, this is what we came up with:
+            </p>
+        </div>
+    </div>
 
-            <!-- BLOK 4 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-12 col-md-6 order-md-2">
-                    <div class="about-panel">
-                        <p><span>Music has been a constant companion throughout my life, shaping both my personal and professional journey. Whether performing live, composing for games, or teaching, I strive to bring creativity, emotion, and dedication to every project I undertake.</span></p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 order-md-1 text-center">
-                    <div class="about-panel">
-                        <img src="img/stuyo.jpg" class="img-fluid">
-                    </div>
-                </div>
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <div class="video-wrapper h-450">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162709446&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
             </div>
+         </div>
+    </div>
+</div>
+
+
+          <!-- BLOK 4: Gladiator's Journey -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Let's continue with Gladiator's Journey. I composed the entire soundtrack for this game and waited for the team to finish it. Meanwhile, my team was trying to complete several other games and had to prioritize those, so the project was ultimately abandoned before the game could be completed. Still, it was one of the projects I enjoyed the most musically, especially the main theme.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 order-md-1 text-center">
+        <div class="about-panel">
+            <div class="video-wrapper h-450">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162770736&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            </div>
+       </div>
+    </div>
+</div>
 
             <!-- ALT LINK GRID (4 kutu) -->
             <div class="link-grid-container">
