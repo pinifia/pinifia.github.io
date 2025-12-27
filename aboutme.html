@@ -92,10 +92,8 @@ span {
   color: rgb(99,127,148);
   padding: 4px 6px;
 
-  /* Buzlu zemin */
   background-color: rgba(255,255,255,0.85);
 
-  /* DİKEY + YATAY FADE → MASK İLE */
   -webkit-mask-image: linear-gradient(
       to bottom,
       rgba(0,0,0,0) -20%,
@@ -115,108 +113,128 @@ span {
   mask-composite: intersect;
 }
 
-          /* ABOUT PANEL */
-       .about-panel {
-    background: rgba(255, 255, 255, 0.55);  /* buzlu cam */
+.about-panel {
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 0px solid rgba(255, 255, 255, 0); /* 1px ince beyaz çerçeve */
-    border-radius: 0px; /* isteğe göre köşeler */
+    border: 0px solid rgba(255, 255, 255, 0);
+    border-radius: 0px;
     padding: 24px;
     margin-bottom: 24px;
 }
-        .about-panel p {
-            text-align: justify;
-            text-justify: inter-word;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
-            line-height: 1.6;
-        }
-        
-        /* WRAPPER & CONTAINER */
-        #tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
-        .tm-main-content { width: 100%; display:flex; justify-content:center; min-height:100vh; padding-top:0; margin-top:0; position:relative; top:0; transform:none; }
-        .tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
-        .tm-site-header-container .row { justify-content:center; }
-        .tm-site-header-container img { position:relative; z-index:10; }
-        #tm-bg { z-index:0; }
-
-        .tm-site-header { background-position:center center; background-size:cover; }
-        @media (max-width:768px){ .tm-site-header { background-position:left center; } }
-
-        /* MOBILE & TABLET */
-        @media (max-width:768px){ .about-panel{ padding:18px; } }
-        @media (max-width:576px){
-            .tm-site-header-container { padding-left:4px; padding-right:4px; margin-top:20px !important; }
-            .tm-site-header-container .col-12 { padding-left:4px; padding-right:4px; }
-            .about-panel{ padding:14px 8px; }
-            .about-panel p{ font-size:17px; line-height:1.6; text-align:left; hyphens:none; }
-        }
-
-        /* VIDEO WRAPPER */
-        .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* ← iframe’lerin altına boşluk ekler */
-        }
-        .video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0; }
-        .about-panel .video-wrapper:not(:last-child) {
-    margin-bottom: 20px; /* videolar arası boşluk */
+.about-panel p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    line-height: 1.6;
 }
         
-        /* LINK GRID */
-        .link-grid-container{
-            display:grid;
-            grid-template-columns:repeat(4,1fr);
-            gap:16px;
-            margin:40px auto;
-            max-width:1200px;
-            padding:0 12px;
-        }
-        .link-box{
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            background: rgba(255,255,255,0.55);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            color: rgb(99,127,148);
-            font-family: "Rubik Doodle Shadow", system-ui, sans-serif;
-            font-weight:bold;
-            font-size:20px;
-            text-align:center;
-            padding:24px;
-            border-radius:0;
-            text-decoration:none;
-            transition: background 0.3s, transform 0.3s;
-        }
-        .link-box:hover{
-            background: rgba(219,105,63,0.5);
-            color: rgba(255,119,51,1);
-            transform:translateY(-4px);
-        }
-        .link-icon{ width:60px; height:auto; margin-bottom:12px; }
-        @media(max-width:768px){
-            .link-grid-container{ grid-template-columns:repeat(2,1fr); gap:12px; margin:20px auto; }
-            .link-box{ font-size:18px; padding:18px; }
-            .link-icon{ width:50px; }
-        }
-        @media(max-width:480px){
-            .link-grid-container{ grid-template-columns:1fr; gap:12px; }
-            .link-box{ font-size:16px; padding:14px; }
-            .link-icon{ width:40px; }
-        }
-        .link-box:hover span{ color: rgba(255,128,0,1); }
-    </style>
+#tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
+.tm-main-content { width: 100%; display:flex; justify-content:center; min-height:100vh; padding-top:0; margin-top:0; position:relative; top:0; transform:none; }
+.tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
+.tm-site-header-container .row { justify-content:center; }
+.tm-site-header-container img { position:relative; z-index:10; }
+#tm-bg { z-index:0; }
+
+.tm-site-header { background-position:center center; background-size:cover; }
+@media (max-width:768px){ .tm-site-header { background-position:left center; } }
+
+@media (max-width:768px){ .about-panel{ padding:18px; } }
+@media (max-width:576px){
+    .tm-site-header-container { padding-left:4px; padding-right:4px; margin-top:20px !important; }
+    .tm-site-header-container .col-12 { padding-left:4px; padding-right:4px; }
+    .about-panel{ padding:14px 8px; }
+    .about-panel p{ font-size:17px; line-height:1.6; text-align:left; hyphens:none; }
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+.video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0; }
+.about-panel .video-wrapper:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.link-grid-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin:40px auto;
+    max-width:1200px;
+    padding:0 12px;
+}
+.link-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: rgb(99,127,148);
+    font-family: "Rubik Doodle Shadow", system-ui, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    text-align:center;
+    padding:24px;
+    border-radius:0;
+    text-decoration:none;
+    transition: background 0.3s, transform 0.3s;
+}
+.link-box:hover{
+    background: rgba(219,105,63,0.5);
+    color: rgba(255,119,51,1);
+    transform:translateY(-4px);
+}
+.link-icon{ width:60px; height:auto; margin-bottom:12px; }
+@media(max-width:768px){
+    .link-grid-container{ grid-template-columns:repeat(2,1fr); gap:12px; margin:20px auto; }
+    .link-box{ font-size:18px; padding:18px; }
+    .link-icon{ width:50px; }
+}
+@media(max-width:480px){
+    .link-grid-container{ grid-template-columns:1fr; gap:12px; }
+    .link-box{ font-size:16px; padding:14px; }
+    .link-icon{ width:40px; }
+}
+.link-box:hover span{ color: rgb(223, 100, 39); }
+</style>
 </head>
 
 <body>
+  
 <div id="tm-bg"></div>
 <div id="tm-wrap">
     <div class="tm-main-content">
         <div class="container tm-site-header-container">
+
+ <div style="display:flex; justify-content:center; margin-top:20px; margin-bottom:40px;">
+    <div style="background: rgba(255,255,255,0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding:20px 30px; border-radius:0; text-align:center; display:inline-block;">
+        <h1 style="font-family: 'Rubik Doodle Shadow', system-ui, sans-serif; font-size:48px; color: rgb(99,127,148); margin:0;">
+            What can I do for you?
+        </h1>
+    </div>
+</div>
+
+            <!-- ÜST LINK GRID (3 kutu, alttakilerle aynı boyutta, ortalanmış) -->
+            <div style="display:flex; justify-content:center; gap:16px; margin-top:20px; margin-bottom:40px; flex-wrap:wrap;">
+                <a href="portfolio.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+                    <img src="img/icon2.gif" class="link-icon" alt="Icon 2">
+                    <span>Compositions & Portfolio</span>
+                </a>
+                <a href="multimedia.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+                    <img src="img/icon3.gif" class="link-icon" alt="Icon 3">
+                    <span>Live & Multimedia</span>
+                </a>
+                <a href="contact.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+                    <img src="img/icon9.png" class="link-icon" alt="Icon 4">
+                    <span>Social Media & Contact</span>
+                </a>
+            </div>
 
             <!-- BLOK 1 -->
             <div class="row align-items-center mb-5">
@@ -290,12 +308,12 @@ span {
                 </div>
             </div>
 
-            <!-- LINK GRID -->
+            <!-- ALT LINK GRID (4 kutu) -->
             <div class="link-grid-container">
                 <a href="index.html" class="link-box"><img src="img/home.png" class="link-icon" alt="Icon 1"><span>Back to Home</span></a>
-                <a href="index.html" class="link-box"><img src="img/icon2.gif" class="link-icon" alt="Icon 2"><span>Compositions & Portfolio</span></a>
-                <a href="index.html" class="link-box"><img src="img/icon3.gif" class="link-icon" alt="Icon 3"><span>Live & Multimedia</span></a>
-                <a href="index.html" class="link-box"><img src="img/icon9.png" class="link-icon" alt="Icon 4"><span>Social Media & Contact</span></a>
+                <a href="portfolio.html" class="link-box"><img src="img/icon2.gif" class="link-icon" alt="Icon 2"><span>Compositions & Portfolio</span></a>
+                <a href="multimedia.html" class="link-box"><img src="img/icon3.gif" class="link-icon" alt="Icon 3"><span>Live & Multimedia</span></a>
+                <a href="contact.html" class="link-box"><img src="img/icon9.png" class="link-icon" alt="Icon 4"><span>Social Media & Contact</span></a>
             </div>
 
         </div>
