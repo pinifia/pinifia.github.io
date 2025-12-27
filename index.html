@@ -135,6 +135,33 @@
         0 0 32px rgba(255,255,255,0.12);
         }
 
+        .bottom-box {
+    position: fixed;                      /* ekranın altına yapışık */
+    bottom: 30px;                         /* alt boşluk */
+    left: 50%;                             /* yatay ortalama */
+    transform: translateX(-50%);
+    padding: 10px 25px;
+    background: rgba(255,255,255,0.6);    /* şeffaf beyaz */
+    border: 1px solid white;              /* 1px beyaz border */
+    border-radius: 0;                      /* köşeler köşeli */
+    display: inline-block;                 /* içerik boyutuna göre */
+    text-align: center;
+    z-index: 9999;                         /* üstte görünsün */
+}
+        /* EN / TR linkleri */
+.bottom-box-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+/* Hover efekti */
+.bottom-box-link:hover {
+    color: red;
+}
+
 
         .tm-nav-link:hover .tm-nav-text {
             color: rgb(255,119,51);
@@ -379,13 +406,11 @@
             </div>
          </div>
     </div>
-<footer>
-    <p class="small tm-copyright-text glow-layer"
-       data-text="EN / TR">
-        <a href="pinifia.github.io/index.html" class="tm-text-highlight">EN</a> | 
-        <a href="indextr.html" class="tm-text-highlight">TR</a>
-    </p>
-</footer>
+<!-- Alt kutu, hero-desc glow efektine bağlı -->
+<div class="hero-box hero-desc glow-layer bottom-box" data-text="EN / TR">
+    <a href="pinifia.github.io/index.html" class="bottom-box-link">EN</a> | 
+    <a href="indextr.html" class="bottom-box-link">TR</a>
+</div>
         </div> <!-- .tm-main-content -->  
     </div>
     <!-- load JS -->
@@ -420,6 +445,7 @@
     </script>             
 </body>
 </html>
+
 
 
 
