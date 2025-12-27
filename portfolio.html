@@ -202,6 +202,19 @@ span {
     .link-icon{ width:40px; }
 }
 .link-box:hover span{ color: rgb(223, 100, 39); }
+        /* Üst link grid responsive */
+@media (max-width: 768px) {
+    .top-link-grid {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 12px;
+    }
+    .top-link-grid .link-box {
+        flex: 0 1 90% !important;
+        max-width: 90% !important;
+    }
+}
+
 </style>
 </head>
 
@@ -220,21 +233,22 @@ span {
     </div>
 </div>
 
-            <!-- ÜST LINK GRID (3 kutu, alttakilerle aynı boyutta, ortalanmış) -->
-            <div style="display:flex; justify-content:center; gap:16px; margin-top:20px; margin-bottom:40px; flex-wrap:wrap;">
-                <a href="portfolio.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
-                    <img src="img/icon2.gif" class="link-icon" alt="Icon 2">
-                    <span>Compositions & Portfolio</span>
-                </a>
-                <a href="multimedia.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
-                    <img src="img/icon3.gif" class="link-icon" alt="Icon 3">
-                    <span>Live & Multimedia</span>
-                </a>
-                <a href="contact.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
-                    <img src="img/icon9.png" class="link-icon" alt="Icon 4">
-                    <span>Social Media & Contact</span>
-                </a>
-            </div>
+       <!-- ÜST LINK GRID (3 kutu, alttakilerle aynı boyutta, ortalanmış) -->
+<div class="top-link-grid" style="display:flex; justify-content:center; gap:16px; margin-top:20px; margin-bottom:40px; flex-wrap:wrap;">
+    <a href="portfolio.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+        <img src="img/icon2.gif" class="link-icon" alt="Icon 2">
+        <span>Compositions & Portfolio</span>
+    </a>
+    <a href="multimedia.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+        <img src="img/icon3.gif" class="link-icon" alt="Icon 3">
+        <span>Live & Multimedia</span>
+    </a>
+    <a href="contact.html" class="link-box" style="flex:0 1 calc(25% - 16px); max-width: calc(25% - 16px);">
+        <img src="img/icon9.png" class="link-icon" alt="Icon 4">
+        <span>Social Media & Contact</span>
+    </a>
+</div>
+
 
             <!-- BLOK 1 -->
             <div class="row align-items-center mb-5">
