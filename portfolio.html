@@ -340,6 +340,36 @@ span {
         0 0 12px rgba(255,255,255,0.25),
         0 0 13px rgba(255,255,255,0.12);
 }
+
+#toTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0; /* köşeli */
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#toTopBtn span {
+  font-family: Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(99,127,148);
+  text-transform: uppercase;
+}
+
+#toTopBtn:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
 </style>
 </head>
 
@@ -484,6 +514,7 @@ span {
             <p class="pixel-paragraph">
                 Now let’s talk about Maze Rush. This was a mobile game where you try to solve puzzles by moving stone blocks in an ancient forest. I really loved the first theme I composed for it—it felt like a perfect fit for the game and, in my opinion, was a very strong design choice. However, it wasn’t approved by the game’s developer, and the music went through several revisions. Still, here is the version that lives on in my heart, along with tracks for different levels:
             </p>
+             <p class="pixel-paragraph">Speaking of ancient-themed works, we once designed a game called Missing Artifact. Even though it leans a bit more toward an ethnic sound, it felt like a good match here — so let’s include it as well.</p>
         </div>
     </div>
 
@@ -495,6 +526,7 @@ span {
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162568470&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                 </iframe>
             </div>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1102900978&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/pinifiaworks" title="PinifiaWorks" target="_blank" style="color: #cccccc; text-decoration: none;">PinifiaWorks</a> · <a href="https://soundcloud.com/pinifiaworks/thief-who-game-soundtrack" title="Missing Artifact Game Soundtrack" target="_blank" style="color: #cccccc; text-decoration: none;">Missing Artifact Game Soundtrack</a></div>
          </div>
     </div>
 </div>
@@ -575,7 +607,7 @@ span {
     <!-- SoundCloud iframe kolonu -->
     <div class="col-12 col-md-6 order-md-1 text-center">
         <div class="about-panel">
-                <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1297708828&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                 </iframe>
             <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
@@ -618,7 +650,7 @@ span {
     <!-- SoundCloud iframe kolonu -->
     <div class="col-12 col-md-6 text-center">
         <div class="about-panel">
-                <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1298766199&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                 </iframe>
             <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
@@ -1012,6 +1044,10 @@ span {
 
 </div>
 
+<button id="toTopBtn">
+  <span>to the top</span>
+</button>
+
 <!-- BLOK 19: Compositions -->
     <!-- Metin (SOL) -->
                       <div class="row align-items-center mb-5">
@@ -1195,6 +1231,10 @@ span {
     </div>
 
 </div>
+
+<button id="toTopBtn">
+  <span>to the top</span>
+</button>
 
 <!-- BLOK 24: Freelance Beginning -->
 <div class="row align-items-center mb-5">
@@ -1533,6 +1573,27 @@ span {
         </div>
     </div>
 </div>
+
+<script>
+  const toTopBtn = document.getElementById("toTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      toTopBtn.style.opacity = "1";
+      toTopBtn.style.pointerEvents = "auto";
+    } else {
+      toTopBtn.style.opacity = "0";
+      toTopBtn.style.pointerEvents = "none";
+    }
+  });
+
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 <script src="js/jquery-3.2.1.slim.min.js"></script>    
 <script src="slick/slick.min.js"></script>  
