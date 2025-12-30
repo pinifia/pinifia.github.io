@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pinifia</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            t.innerHTML = "root: { --tmp-var: bold; }";
+            document.head.appendChild(t);
+            e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight","var(--tmp-var)"));
+            t.parentNode.removeChild(t);
+            return e;
+        };
+        supportsCssVars() || alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
+    </script>
+
+    <style>
+        /* GENEL YAZI & FONT */
+        body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+            font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
+            line-height: 1.5;
+            color: rgb(99,127,148);
+            font-weight: bold;
+            background-color: rgba(255,255,255,0);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        p { font-size: 20px; }
+        h1 { font-size: 46px; }
+       
+        /* BUTON & ÜZERİNE GELİNCE */
+        .product__bg {
+            background: rgba(255, 255, 255, 0.6);
+            opacity: 1;
+            transform: none;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+        }
+        .product:hover .product__bg {
+            background: rgba(255, 0, 0, 0.5);
+        }
+
+        /* NAV & ICON */
+        .tm-nav-icon {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            z-index: 1;
+        }
+        .tm-nav-text {
+            position: relative;
+            line-height: 1.2;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 8px;
+            z-index: 2;
+            top: 0;
+            color: rgb(99,127,148);
+            background-color: rgba(255,255,255,0.5);
+            padding: 6px;
+            border-radius: 4px;
+            font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
+        }
+        .tm-nav-link:hover .tm-nav-text {
+            color: rgb(255,0,0);
+            background-color: rgba(255,255,255,0.5);
+            gap: 8px;
+        }
+span {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+  color: rgb(99,127,148);
+  padding: 4px 6px;
+
+  background-color: rgba(255,255,255,0.85);
+
+  -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) -20%,
+      rgba(0,0,0,1) 40%,
+      rgba(0,0,0,1) 60%,
+      rgba(0,0,0,0) 120%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 6px,
+      rgba(0,0,0,1) calc(100% - 6px),
+      rgba(0,0,0,0) 100%
+    );
+
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+}
+
+.about-panel {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 0px solid rgba(255, 255, 255, 0);
+    border-radius: 0px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.about-panel p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    line-height: 1.6;
+}
+        
+#tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
+.tm-main-content { width: 100%; display:flex; justify-content:center; min-height: auto; padding-top:0; padding-bottom: 10px; margin-top:0; position:relative; top:0; transform:none; }
+.tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
+.tm-site-header-container .row { justify-content:center; }
+.tm-site-header-container img { position:relative; z-index:10; }
+#tm-bg { z-index:0; }
+
+.tm-site-header { background-position:center center; background-size:cover; }
+@media (max-width:768px){ .tm-site-header { background-position:left center; } }
+
+@media (max-width:768px){ .about-panel{ padding:18px; } }
+@media (max-width:576px){
+    .tm-site-header-container { padding-left:4px; padding-right:4px; margin-top:20px !important; }
+    .tm-site-header-container .col-12 { padding-left:4px; padding-right:4px; }
+    .about-panel{ padding:14px 8px; }
+    .about-panel p{ font-size:17px; line-height:1.6; text-align:left; hyphens:none; }
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+.video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0; }
+.about-panel .video-wrapper:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.link-grid-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin:40px auto 10px auto; /* ⬅ EN/TR ile 10px */
+    max-width:1200px;
+    padding:0 12px;
+}
+.link-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: rgb(99,127,148);
+    font-family: "Rubik Doodle Shadow", system-ui, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    text-align:center;
+    padding:24px;
+    border-radius:0;
+    text-decoration:none;
+    transition: background 0.3s, transform 0.3s;
+}
+.link-box:hover{
+    background: rgba(219,105,63,0.5);
+    color: rgba(255,119,51,1);
+    transform:translateY(-4px);
+}
+.link-icon{ width:60px; height:auto; margin-bottom:12px; }
+@media(max-width:768px){
+    .link-grid-container{ grid-template-columns:repeat(2,1fr); gap:12px; margin:20px auto; }
+    .link-box{ font-size:18px; padding:18px; }
+    .link-icon{ width:50px; }
+}
+@media(max-width:480px){
+    .link-grid-container{ grid-template-columns:1fr; gap:12px; }
+    .link-box{ font-size:16px; padding:14px; }
+    .link-icon{ width:40px; }
+}
+.link-box:hover span{ color: rgb(223, 100, 39); }
+
+.bottom-lang-box {
+    position: relative;      /* fixed YOK */
+    display: block;
+
+    margin: 3px auto 6px auto;
+    padding: 10px 25px;
+
+    background: rgba(255,255,255,0.6);
+    border: 1px solid white;
+    border-radius: 0;
+
+    width: fit-content;
+    text-align: center;
+
+    color: rgb(99,127,148);
+    z-index: 999;            /* üstte kalsın */
+}
+
+</style>
+</head>
+
+<body>
+ <div id="tm-bg"></div>
+<div id="tm-wrap">
+    <div class="tm-main-content">
+        <div class="container tm-site-header-container">
+
+            <!-- BLOK 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="about-text">
+                        <div class="about-panel">
+                            <h1 class="mb-4"><span>Hakkımda..</span></h1>
+                            <img src="img/underline.png" class="img-fluid mb-4">
+                            <p><span>
+                                Müzikle ilk tanışmam ilkokul yıllarında, yaklaşık 2002’de İtalyan bir arkadaşımın beni Finale adlı müzik kompozisyon yazılımıyla tanıştırmasıyla başladı. Finale’de sayısız saat beste yaparak geçirdim; aynı zamanda evde gitar ve klavye gibi farklı enstrümanları keşfetmeye, denemeler yapmaya ve kendi seslerimi oluşturmaya başladım.
+                            </span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <div class="about-panel">
+                        <img src="img/gallery-img-01-tn.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOK 2 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6 order-md-2">
+                    <div class="about-panel">
+                        <p><span>2010 yılında Boğaziçi Üniversitesi’nde okurken caz ve rock topluluklarında sahne almaya başladım. 2012’de profesyonel vokal dersleri almaya başladım ve o günden beri sesim üzerinde çalışmayı hiç bırakmadım. Yıllar içinde rock, pop, funk ve R&B gibi türlerde sahne alan çeşitli müzik gruplarında yer alarak on yılı aşkın bir sahne deneyimi edindim.</span></p>
+                        <p><span>Üniversite yıllarımda aynı zamanda konservatuvar sınavlarına hazırlanıyordum. Boğaziçi Üniversitesi’nde Kimya bölümünü bitirdikten sonra Bilgi Üniversitesi Müzik Bölümü’ne kabul edildim. Burada müzik teorisi, orkestrasyon, aranjman, kayıt ve ses prodüksiyonu gibi alanlarda kendimi geliştirdim. Müzik eğitimi alırken, İTÜ’nün müzikal ve rock kulüplerinin düzenlediği müzikallerde ve rock gösterilerinde sahne alarak ekip çalışmasına dayalı performans deneyimimi daha da artırdım.</span></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 text-center">
+                    <div class="about-panel">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/bFZ6wVrzE1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/Y13_pjJmw7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/6vA-CYUGTVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOK 3 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="about-panel">
+                        <p><span>İkinci sınıftan itibaren freelance besteci olarak çalışmaya başladım ve çeşitli projeler için özgün müzikler ürettim. Ayrıca müzisyen olarak game jam’lere katıldım; bu süreç oyun müziği besteleme, ses tasarımı ve ses efektleri alanlarındaki becerilerimi geliştirerek yaratıcı ve teknik ufkumu önemli ölçüde genişletti.</span></p>
+                        <p><span>Sınıf birincisi olarak mezun olduktan sonra Zonex Entertainment Studios’ta besteci olarak çalışmaya başladım ve ağırlıklı olarak oyun müzikleri ürettim. Daha sonra iki yıl boyunca uluslararası bir okulda müzik öğretmenliği yaptım. Şu anda başka bir uluslararası okulda kimya öğretmenliği yaparken, aynı zamanda aktif olarak müzik bestelemeye, üretmeye ve sahne almaya devam ediyorum.</span></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <div class="about-panel">
+                        <img src="img/welcome-2.JPEG" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOK 4 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6 order-md-2">
+                    <div class="about-panel">
+                        <p><span>Müzik, hayatım boyunca hem kişisel hem de profesyonel yolculuğumda sürekli bir yol arkadaşı oldu. İster canlı performanslarda, ister oyunlar için beste yaparken, ister eğitim verirken; üstlendiğim her projeye yaratıcılık, duygu ve adanmışlık katmaya çalışıyorum.</span></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 text-center">
+                    <div class="about-panel">
+                        <img src="img/stuyo.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALT LINK GRID (4 kutu) -->
+            <div class="link-grid-container">
+                <a href="indextr.html" class="link-box"><img src="img/home.png" class="link-icon" alt="Icon 1"><span>Ana Sayfaya Dön</span></a>
+                <a href="portfoliotr.html" class="link-box"><img src="img/icon2.gif" class="link-icon" alt="Icon 2"><span>Besteler & Portfolyo</span></a>
+                <a href="multimediatr.html" class="link-box"><img src="img/icon3.gif" class="link-icon" alt="Icon 3"><span>Canlı & Multimedya</span></a>
+                <a href="contacttr.html" class="link-box"><img src="img/icon9.png" class="link-icon" alt="Icon 4"><span>Sosyal Medya & İletişim</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-lang-box glow-layer" data-text="EN / TR">
+    <a href="aboutme.html" class="bottom-box-link">EN</a> |
+    <a href="aboutmetr.html" class="bottom-box-link">TR</a>
+</div>
+
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>    
+<script src="slick/slick.min.js"></script>  
+<script src="js/anime.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(function(){
+    $('.tm-current-year').text(new Date().getFullYear());
+});
+</script>
+</body>
+</html>

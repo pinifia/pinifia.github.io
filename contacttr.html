@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pinifia</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            t.innerHTML = "root: { --tmp-var: bold; }";
+            document.head.appendChild(t);
+            e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight","var(--tmp-var)"));
+            t.parentNode.removeChild(t);
+            return e;
+        };
+        supportsCssVars() || alert("Lütfen bu siteyi Chrome veya Microsoft Edge gibi modern bir tarayıcıda görüntüleyin.");
+    </script>
+
+    <style>
+        body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+            font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
+            line-height: 1.5;
+            color: rgb(99,127,148);
+            font-weight: bold;
+            background-color: rgba(255,255,255,0);
+            padding: 8px 12px;
+            border-radius: 6px;
+            overflow-y: auto;
+        }
+        p { font-size: 20px; }
+        h1 { font-size: 46px; }
+
+        .product__bg {
+            background: rgba(255, 255, 255, 0.6);
+            opacity: 1;
+            transform: none;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+        }
+        .product:hover .product__bg {
+            background: rgba(255, 0, 0, 0.5);
+        }
+
+        .tm-nav-icon {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            z-index: 1;
+        }
+        .tm-nav-text {
+            position: relative;
+            line-height: 1.2;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 8px;
+            z-index: 2;
+            top: 0;
+            color: rgb(99,127,148);
+            background-color: rgba(255,255,255,0.5);
+            padding: 6px;
+            border-radius: 4px;
+            font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
+        }
+        .tm-nav-link:hover .tm-nav-text {
+            color: rgb(255,0,0);
+            background-color: rgba(255,255,255,0.5);
+            gap: 8px;
+        }
+
+        span {
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            color: rgb(99,127,148);
+            padding: 4px 6px;
+            background-color: rgba(255,255,255,0.85);
+            -webkit-mask-image:
+              linear-gradient(to bottom, rgba(0,0,0,0) -20%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 120%),
+              linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 6px, rgba(0,0,0,1) calc(100% - 6px), rgba(0,0,0,0) 100%);
+            -webkit-mask-composite: intersect;
+            mask-composite: intersect;
+        }
+
+        .about-panel {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 0px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .about-panel p {
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.6;
+        }
+
+        #tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
+        .tm-main-content { width: 100%; display:flex; justify-content:center; padding-bottom: 10px; overflow: visible !important;
+    height: auto !important; }
+        .tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
+
+        @media (max-width:576px){
+            .about-panel p{ font-size:17px; line-height:1.6; text-align:left; }
+        }
+
+        .link-grid-container{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:16px;
+            margin:40px auto 14px auto;
+            max-width:1200px;
+            padding:0 12px;
+        }
+        .link-box{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            background: rgba(255,255,255,0.55);
+            backdrop-filter: blur(4px);
+            color: rgb(99,127,148);
+            font-weight:bold;
+            font-size:20px;
+            text-align:center;
+            padding:24px;
+            border-radius:0;
+            text-decoration:none;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .link-box:hover{
+            background: rgba(219,105,63,0.5);
+            color: rgba(255,119,51,1);
+            transform:translateY(-4px);
+        }
+        .link-icon{ width:60px; margin-bottom:12px; }
+
+        .bottom-lang-box {
+            margin: 4px auto 10px auto;
+            padding: 10px 25px;
+            background: rgba(255,255,255,0.6);
+            border: 1px solid white;
+            width: fit-content;
+            text-align: center;
+            color: rgb(99,127,148);
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="tm-bg"></div>
+<div id="tm-wrap">
+    <div class="tm-main-content">
+        <div class="container tm-site-header-container">
+
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="about-panel">
+                        <h1 class="mb-4"><span>İletişim</span></h1>
+                        <img src="img/underline.png" class="img-fluid mb-4">
+
+                        <p><span>
+                            Yeni projeler, yeni fikirler, yeni teklifler, iş birlikleri ve her türlü etkileşim için ihtiyacınız olan her şey burada:
+                        </span></p>
+
+                        <p><span>
+                            Gmail: <a href="mailto:pinifia@gmail.com">pinifia@gmail.com</a>
+                        </span></p>
+
+                        <p><span>
+                            Instagram: <a href="https://www.instagram.com/pinifia" target="_blank">instagram.com/pinifia</a>
+                        </span></p>
+
+                        <p><span>
+                            SoundCloud:
+                            <br>
+                            <a href="https://soundcloud.com/pinifiaworks" target="_blank">soundcloud.com/pinifiaworks</a>
+                            <br>
+                            <a href="https://soundcloud.com/pinarkarabas" target="_blank">soundcloud.com/pinarkarabas</a>
+                        </span></p>
+
+                        <p><span>
+                            Diğer medya detayları daha sonra paylaşılacaktır.
+                        </span></p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 text-center">
+                    <div class="about-panel">
+                        <img src="img/contact.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="link-grid-container">
+    <a href="indextr.html" class="link-box">
+        <img src="img/home.png" class="link-icon">
+        Ana Sayfaya Dön
+    </a>
+    <a href="aboutmetr.html" class="link-box">
+        <img src="img/icon13.png" class="link-icon">
+        Hakkımda
+    </a>
+    <a href="portfoliotr.html" class="link-box">
+        <img src="img/icon2.gif" class="link-icon">
+        Portfolyo
+    </a>
+    <a href="multimediatr.html" class="link-box">
+        <img src="img/icon3.gif" class="link-icon">
+        Canlı & Multimedya
+    </a>
+</div>
+
+<div class="bottom-lang-box">
+    <a href="contact.html">EN</a> |
+    <a href="contacttr.html">TR</a>
+</div>
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="slick/slick.min.js"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

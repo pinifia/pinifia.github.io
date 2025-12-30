@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pinifia</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            t.innerHTML = "root: { --tmp-var: bold; }";
+            document.head.appendChild(t);
+            e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight","var(--tmp-var)"));
+            t.parentNode.removeChild(t);
+            return e;
+        };
+        supportsCssVars() || alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
+    </script>
+
+    <style>
+        /* GENEL YAZI & FONT */
+        body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+            font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
+            line-height: 1.5;
+            color: rgb(99,127,148);
+            font-weight: bold;
+            background-color: rgba(255,255,255,0);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        p { font-size: 20px; }
+        h1 { font-size: 46px; }
+
+        
+        /* BUTON & ÜZERİNE GELİNCE */
+        .product__bg {
+            background: rgba(255, 255, 255, 0.6);
+            opacity: 1;
+            transform: none;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+        }
+        .product:hover .product__bg {
+            background: rgba(255, 0, 0, 0.5);
+        }
+
+        /* NAV & ICON */
+        .tm-nav-icon {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            z-index: 1;
+        }
+        .tm-nav-text {
+            position: relative;
+            line-height: 1.2;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 8px;
+            z-index: 2;
+            top: 0;
+            color: rgb(99,127,148);
+            background-color: rgba(255,255,255,0.5);
+            padding: 6px;
+            border-radius: 4px;
+            font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
+        }
+        .tm-nav-link:hover .tm-nav-text {
+            color: rgb(255,0,0);
+            background-color: rgba(255,255,255,0.5);
+            gap: 8px;
+        }
+span {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+  color: rgb(99,127,148);
+  padding: 4px 6px;
+
+  background-color: rgba(255,255,255,0.85);
+
+  -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) -20%,
+      rgba(0,0,0,1) 40%,
+      rgba(0,0,0,1) 60%,
+      rgba(0,0,0,0) 120%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 6px,
+      rgba(0,0,0,1) calc(100% - 6px),
+      rgba(0,0,0,0) 100%
+    );
+
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+}
+
+.about-panel {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 0px solid rgba(255, 255, 255, 0);
+    border-radius: 0px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.about-panel p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    line-height: 1.6;
+}
+        
+#tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
+.tm-main-content { width: 100%; display:flex; justify-content:center; min-height: auto; padding-top:0; margin-top:0; position:relative; top:0; transform:none; }
+.tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
+.tm-site-header-container .row { justify-content:center; }
+.tm-site-header-container img { position:relative; z-index:10; }
+#tm-bg { z-index:0; }
+
+.tm-site-header { background-position:center center; background-size:cover; }
+@media (max-width:768px){ .tm-site-header { background-position:left center; } }
+@media (max-width:768px){ .about-panel{ padding:18px; } }
+@media (max-width:576px){
+    .tm-site-header-container { padding-left:4px; padding-right:4px; margin-top:20px !important; }
+    .tm-site-header-container .col-12 { padding-left:4px; padding-right:4px; }
+    .about-panel{ padding:14px 8px; }
+    .about-panel p{ font-size:17px; line-height:1.6; text-align:left; hyphens:none; }
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 0;
+}
+
+.video-wrapper.h-300 {
+    height: 300px;
+}
+
+.video-wrapper.h-450 {
+    height: 450px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.about-panel .video-wrapper:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+
+.link-grid-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin:40px auto 14px auto;
+    max-width:1200px;
+    padding:0 12px;
+    margin-bottom:14px;
+}
+.link-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: rgb(99,127,148);
+    font-family: "Rubik Doodle Shadow", system-ui, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    text-align:center;
+    padding:24px;
+    border-radius:0;
+    text-decoration:none;
+    transition: background 0.3s, transform 0.3s;
+}
+.link-box:hover{
+    background: rgba(219,105,63,0.5);
+    color: rgba(255,119,51,1);
+    transform:translateY(-4px);
+}
+.link-icon{ width:60px; height:auto; margin-bottom:12px; }
+@media(max-width:768px){
+    .link-grid-container{ grid-template-columns:repeat(2,1fr); gap:12px; margin:20px auto; }
+    .link-box{ font-size:18px; padding:18px; }
+    .link-icon{ width:50px; }
+}
+@media(max-width:480px){
+    .link-grid-container{ grid-template-columns:1fr; gap:12px; }
+    .link-box{ font-size:16px; padding:14px; }
+    .link-icon{ width:40px; }
+}
+.link-box:hover span{ color: rgb(223, 100, 39); }
+
+        /* ÜST LINK GRID (3 kutu) */
+.top-link-grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    padding-left: 18px;  /* istediğin kadar boşluk */
+    padding-right: 18px;
+}
+
+.top-link-grid a {
+    flex: 0 1 calc(25% - 16px);
+    max-width: calc(25% - 16px);
+}
+
+/* Mobil görünüm: 768px ve altı */
+@media (max-width: 768px) {
+    .top-link-grid a {
+        flex: 1 1 100%;
+        max-width: 100%;
+        font-size: 16px; /* alt linklerle aynı boyut */
+        padding: 18px;  /* alt linklerle aynı padding */
+    }
+}
+        .icon14-large {
+    width: 80px;   /* önce 60px ise bunu 80px yapabilirsin */
+    height: auto;  /* orantıyı korur */
+}
+        @media (max-width:768px){
+    .icon14-large {
+        width: 62px; /* mobilde biraz daha küçük olabilir */
+        height: auto;
+    }
+}
+ .pixel-paragraph {
+    font-family: 'Pixelify Sans', sans-serif !important;
+    font-size: 22px; /* ihtiyacına göre ayarla */
+    font-weight: 500;
+    color: rgb(99,127,148, 1);
+    display: inline-block; /* link-box arka planını bozmaz */
+    text-align: center;
+        /* Glow efekti */
+    text-shadow:
+        0 1px 1px rgba(255,255,255,0.95),
+        0 2px 2px rgba(255,255,255,0.65),
+        0 3px 3px rgba(255,255,255,0.4), 
+        0 0 6px  rgba(255,255,255,1),
+        0 0 8px  rgba(255,255,255,0.90),
+        0 0 10px rgba(255,255,255,0.45),
+        0 0 12px rgba(255,255,255,0.25),
+        0 0 13px rgba(255,255,255,0.12);
+}
+
+.pixel-paragraph-h1 {
+    font-family: 'Pixelify Sans', sans-serif !important;
+    font-weight: 500;
+    font-size: 48px;
+          /* Glow efekti */
+    text-shadow:
+        0 1px 1px rgba(255,255,255,0.95),
+        0 2px 2px rgba(255,255,255,0.65),
+        0 3px 3px rgba(255,255,255,0.4), 
+        0 0 6px  rgba(255,255,255,1),
+        0 0 8px  rgba(255,255,255,0.90),
+        0 0 10px rgba(255,255,255,0.45),
+        0 0 12px rgba(255,255,255,0.25),
+        0 0 13px rgba(255,255,255,0.12);
+}
+.courier-text-bold {
+     font-family: 'Courier Prime', monospace !important;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgb(99,127,148, 1);
+
+    display: inline-block;
+    text-align: center;
+
+    line-height: 1;          /* 🔽 boşluğu düşüren ana ayar */
+    letter-spacing: -0.04em;    /* 🔽 harf arası çok hafif sıkı */
+
+    /* Glow efekti */
+    text-shadow:
+        0 1px 1px rgba(255,255,255,0.95),
+        0 2px 2px rgba(255,255,255,0.65),
+        0 3px 3px rgba(255,255,255,0.4), 
+        0 0 6px  rgba(255,255,255,1),
+        0 0 8px  rgba(255,255,255,0.90),
+        0 0 10px rgba(255,255,255,0.45),
+        0 0 12px rgba(255,255,255,0.25),
+        0 0 13px rgba(255,255,255,0.12);
+}
+
+.courier-text-h1 {
+    font-family: 'Courier Prime', monospace !important;
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(99,127,148, 1);
+
+    display: inline-block;
+    text-align: center;
+
+    line-height: 1.10;          /* 🔽 H1 için ideal sıkılık */
+    letter-spacing: -0.03em;    /* 🔽 Courier’da çok işe yarıyor */
+
+    /* Glow efekti (pixel ile birebir) */
+    text-shadow:
+        0 1px 1px rgba(255,255,255,0.95),
+        0 2px 2px rgba(255,255,255,0.65),
+        0 3px 3px rgba(255,255,255,0.4), 
+        0 0 6px  rgba(255,255,255,1),
+        0 0 8px  rgba(255,255,255,0.90),
+        0 0 10px rgba(255,255,255,0.45),
+        0 0 12px rgba(255,255,255,0.25),
+        0 0 13px rgba(255,255,255,0.12);
+}
+
+#toTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0; /* köşeli */
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#toTopBtn span {
+  font-family: Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(99,127,148);
+  text-transform: uppercase;
+}
+
+#toTopBtn:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.bottom-lang-box {
+    position: relative;      /* fixed YOK */
+    display: block;
+
+    margin: 3px auto 6px auto;
+    margin-top:0;
+    padding: 10px 25px;
+
+    background: rgba(255,255,255,0.6);
+    border: 1px solid white;
+    border-radius: 0;
+
+    width: fit-content;
+    text-align: center;
+
+    color: rgb(99,127,148);
+    z-index: 999;            /* üstte kalsın */
+}
+
+</style>
+</head>
+
+<body>
+<div id="tm-bg"></div>
+<div id="tm-wrap">
+    <div class="tm-main-content">
+        <div class="container tm-site-header-container">
+
+ <div style="display:flex; justify-content:center; margin-top:20px; margin-bottom:40px;">
+    <div style="background: rgba(255,255,255,0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding:20px 30px; border-radius:0; text-align:center; display:inline-block;">
+        <h1 style="font-family: 'Rubik Doodle Shadow', system-ui, sans-serif; font-size:48px; color: rgb(99,127,148); margin:0;">
+            Yolunu Seç
+        </h1>
+    </div>
+</div>
+<!-- ÜST LINK GRID -->
+<div class="top-link-grid">
+    <a href="#game-music" class="link-box">
+        <img src="img/icon14.png" class="link-icon icon14-large" alt="Icon 2">
+        <span class="pixel-paragraph">Oyun Müziği</span>
+    </a>
+
+    <a href="#pinifia-originals" class="link-box">
+    <img src="img/icon13.png" class="link-icon" alt="Icon 3">
+    <span>Kendi Bestelerim</span>
+</a>
+
+    <a href="#Jingles" class="link-box">
+        <img src="img/icon15.png" class="link-icon" alt="Icon 4">
+        <span class="courier-text-bold">Jingle’lar & Çeşitli Çalışmalar</span>
+    </a>
+</div>
+            
+            <!-- BLOK 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6">
+                    <div class="about-text">
+                        <div class="about-panel">
+                            <h1 id="game-music" class="mb-4 pixel-paragraph-h1">Oyun Müziği</h1>
+                            <img src="img/underline.png" class="img-fluid mb-4">
+                            <p class="pixel-paragraph">
+    Çocukluğumdan beri aktif bir oyuncuyum. Üniversite yıllarımda bu alanda güçlü bir çevre edindikten sonra, freelance çalışmaların yanı sıra game jam’lere katılarak oyunlar için müzik üretme becerilerimi geliştirmeye odaklandım. Daha sonra Tonguç Bodur ile Pluviophile ve Chionophile gibi bazı Steam oyunlarında birlikte çalıştım ve Zonex Entertainment Studios’ta tam zamanlı olarak oyun müzikleri besteledim. Oyunlar için müzik üretmeye hâlâ büyük bir tutkuyla bağlıyım, bu alanda gelişmeye devam etmek istiyorum ve her türlü heyecan verici projeye açığım.
+</p>
+
+<p class="pixel-paragraph">
+    Aşağıda farklı projelerden bazı çalışmalarımı bulabilirsiniz.
+</p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <div class="about-panel">
+                        <img src="img/spot-bg-02.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+ <!-- BLOK 2 -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                En güncel proje olan Fenomen Go ile başlayalım. Fall Guys benzeri bir oyundu ve müzikleri için gerçekten çok emek verdim.
+                Bu parçaları hâlâ dinlemekten keyif alıyorum ancak oyun hiçbir zaman yayınlanmadı.
+                Yine de burada paylaşmak istedim — bir hikâyenin parçası olamasalar da belki daha fazla kişi keyifle dinler.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 order-md-1 text-center">
+        <div class="about-panel">
+                <iframe width="100%" height="235" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162825183&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;">
+                <a href="https://soundcloud.com/pinifiaworks" title="PinifiaWorks" target="_blank" style="color: #cccccc; text-decoration: none;">PinifiaWorks</a> · 
+                <a href="https://soundcloud.com/pinifiaworks/sets/fenomen-go-soundtrack" title="Fenomen Go Soundtrack" target="_blank" style="color: #cccccc; text-decoration: none;">Fenomen Go Soundtrack</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- BLOK 3 -->
+<div class="row align-items-center mb-5">
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Slime Spy ile devam edelim — aslında Slime Spy 2 (ilk oyun pek yayınlanmadı). Zonex Entertainment Studios’ta tek müzisyen olarak çalıştığım dönemde üzerinde çalıştığım bir projeydi. Müziğin oyuncuların hislerini gerçekten yansıtması için ekip arkadaşlarımla mümkün olduğunca yakın çalıştım. Sonunda ortaya çıkan şey de buydu:
+            </p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <div class="video-wrapper h-450">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162709446&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            </div>
+         </div>
+    </div>
+</div>
+
+<!-- BLOK 4: Gladiator's Journey -->
+<div class="row align-items-center mb-5">
+    <div class="col-12 col-md-6 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Gladiator's Journey ile devam edelim. Bu oyun için tüm müzikleri ben besteledim ve ekibin oyunu tamamlamasını bekledim. Ancak ekip aynı anda başka oyunları da bitirmeye çalıştığı için öncelikler değişti ve proje tamamlanmadan rafa kaldırıldı. Yine de müzikal anlamda en keyif aldığım projelerden biriydi, özellikle ana tema.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 order-md-1 text-center">
+        <div class="about-panel">
+            <div class="video-wrapper h-450">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162770736&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            </div>
+       </div>
+    </div>
+</div>
+
+<!-- BLOK 5: Maze Rush -->
+<div class="row align-items-center mb-5">
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Şimdi Maze Rush’tan bahsedelim. Antik bir ormanda taş blokları hareket ettirerek bulmacalar çözdüğünüz bir mobil oyundu. Bestelediğim ilk temayı gerçekten çok seviyordum; oyuna çok yakıştığını ve tasarım açısından güçlü bir tercih olduğunu düşünüyordum. Ancak geliştirici tarafından onaylanmadı ve müzik birçok revizyondan geçti. Yine de kalbimde yaşayan versiyonu ve farklı bölümler için hazırlanan parçalarla birlikte burada paylaşıyorum:
+            </p>
+             <p class="pixel-paragraph">Antik temalı işlerden bahsetmişken, bir dönem Missing Artifact adlı bir oyun tasarlamıştık. Biraz daha etnik bir tarza sahip olsa da buraya çok yakıştığını düşündüm — o yüzden bunu da ekleyelim.</p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <div class="video-wrapper h-450">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162568470&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            </div>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1102900978&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/pinifiaworks" title="PinifiaWorks" target="_blank" style="color: #cccccc; text-decoration: none;">PinifiaWorks</a> · <a href="https://soundcloud.com/pinifiaworks/thief-who-game-soundtrack" title="Missing Artifact Game Soundtrack" target="_blank" style="color: #cccccc; text-decoration: none;">Missing Artifact Game Soundtrack</a></div>
+         </div>
+    </div>
+</div>
+
+<!-- BLOK 6: Coco -->
+<div class="row align-items-center mb-5">
+    <div class="col-12 col-md-6 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Coco, eski bir game jam sırasında yaptığımız bir oyundu ve görselleri harikaydı. Oyun artık oldukça eski ve bağlantısı erişilebilir olmasa da, müziklerini bestelerken inanılmaz keyif aldım.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 order-md-1 text-center">
+        <div class="about-panel">
+            <div class="video-wrapper h-450">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1298858248&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 7 -->
+<div class="row align-items-center mb-5">
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Jam Simulator da başka bir game jam projesiydi ve oyun müziği bestelerken yaşadığım en eğlenceli deneyimlerden biriydi.
+                Harika bir ekibimiz vardı ve özellikle vokal kayıtlarını yapmak çok keyifliydi.
+                Yine de favorim hile müziğiydi.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <div class="video-wrapper" style="height:450px;">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1298794372&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 8: Pluviophile -->
+<div class="row align-items-center mb-5">
+    <div class="col-12 col-md-6 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Steam’de yer alan müzik albümlerimizden birinden de bahsedelim.
+                <em>Pluviophile</em>, Türkçede yağmurlu havayı seven insanları tanımlamak için kullanılan bir kelimedir
+                ve aynı zamanda Tonguç Bodur’un bir oyununun adıdır.
+                Hikâye odaklı bu yürüyüş simülasyonu, yağmuru ve doğayı sevenler için tasarlandı
+                ve müzik albümü de bu deneyimin bir parçası olarak özel olarak bestelendi.
+                Aşağıda hem oyun hem de albüm bağlantılarını bulabilir, müzikleri birlikte dinleyebilirsiniz.
+            </p>
+
+            <p class="pixel-paragraph" style="margin-top:16px;">
+                <a href="https://store.steampowered.com/app/1322170/Pluviophile/" target="_blank">
+                    → Pluviophile (Steam)
+                </a><br>
+                <a href="https://store.steampowered.com/app/1336270/Pluviophile_Soundtrack/" target="_blank">
+                    → Pluviophile Soundtrack (Steam)
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 order-md-1 text-center">
+        <div class="about-panel">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1297708828&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/pluviophile-soundtrack" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Pluviophile Soundtrack
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 9: Chionophile -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Tonguç ile birlikte üzerinde çalıştığım bir diğer oyun <em>Chionophile</em>.
+                Türkçede “kar seven insanlar” anlamına gelen bu terim, oyunun ruhunu oldukça iyi yansıtıyor.
+                Bu albüm, daha atmosferik bir yaklaşıma sahip ve hikâye odaklı bir yürüyüş simülasyonunun
+                karakterin yolculuğu boyunca anlattığı hikâyeyi canlandırıyor.
+                Daha geniş bir enstrüman yelpazesi ve zengin orkestral düzenlemeler içeren albüm,
+                müzisyen odaklı bir prodüktörle çalışmanın getirdiği yaratıcı özgürlüğü yansıtıyor —
+                bunu tüm üretim süreci boyunca derinden hissettim.
+                Oyunun ve soundtrack’in bağlantılarını aşağıda bulabilirsiniz.
+            </p>
+
+            <p class="pixel-paragraph" style="margin-top:16px;">
+                <a href="https://store.steampowered.com/app/1432750/Chionophile/?curator_clanid=33016994" target="_blank">
+                    → Chionophile Steam Sayfası
+                </a><br>
+                <a href="https://store.steampowered.com/app/1441700/Chionophile_Soundtrack/" target="_blank">
+                    → Chionophile Soundtrack (Steam)
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1298766199&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/chionophile-soundtrack" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Chionophile Soundtrack
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 10: Falling Memories -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Paylaşmak istediğim bir diğer piyano ağırlıklı proje,
+                Ludum Dare 48 kapsamında harika bir ekiple geliştirdiğimiz
+                <em>Falling Memories</em> oyununun müzikleri.
+                Bu müzikler üzerinde çalışmayı gerçekten çok sevdim ve
+                hâlâ zaman zaman ana temayı açıp dinlediğim oluyor.
+                Oyuna aşağıdaki bağlantıdan ulaşabilirsiniz.
+            </p>
+
+            <p class="pixel-paragraph link-paragraph">
+                <a href="https://bufuak.itch.io/falling-memories" target="_blank">
+                    → Falling Memories (itch.io)
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 order-md-1 text-center">
+        <div class="about-panel">
+                <iframe width="100%" height="235" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1298867164&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/falling-memories-soundtracks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Falling Memories Soundtracks
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- BLOK 11: Piano Pieces -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Daha fazla piyano ağırlıklı parça için,
+                ilk olarak <em>Pluviophile</em> için bestelediğim
+                <em>In the Heart of Vivaldi</em> adlı parçayı paylaşmak isterim.
+                Prodüksiyon aşamasında, Vivaldi hissiyatı taşıması istenmişti
+                ancak oyunla yeterince örtüşmediği için projeye dahil edilmedi.
+                Buna rağmen, yazdığım en sevdiğim piyano parçalarından biri olarak kaldı.
+            </p>
+
+            <p class="pixel-paragraph">
+                Son olarak, başka bir game jam sırasında yapılan
+                pinball esintili <em>Wall Ball</em> oyunu için bestelediğim
+                sakin bir piyano parçasını da dinleyebilirsiniz.
+                Her iki parçayı yan yana bulabilirsiniz.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu (2 embed alt alta) -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+
+            <!-- Embed 1 -->
+            <div class="video-wrapper" style="height:166px; margin-bottom:16px;">
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1102079614&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+            </div>
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100; margin-bottom:12px;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/in-the-heart-of-vivaldi" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    In the Heart of Vivaldi
+                </a>
+            </div>
+
+            <!-- Embed 2 -->
+            <div class="video-wrapper" style="height:166px;">
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2233923332&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+            </div>
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/wall-ball-main-theme" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Wall Ball Main Theme
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 12: 8-bit Soundtracks -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Çeşitli game jam projeleri için ürettiğimiz bazı 8-bit müziklerden de bahsetmek gerek.
+                Görsel olarak düşük çözünürlüklü olsalar da,
+                müzikal anlamda şimdiye kadar yaptığım en güçlü işlerden bazıları bunlar.
+                Keşfetmeniz için çalma listesini buraya bırakıyorum.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 order-md-1 text-center">
+        <div class="about-panel">
+                <iframe width="100%" height="435" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1298829457&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/8-bit-soundtracks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    8 bit Soundtracks
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 13: Enstruman Park Inworld Theme -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Bu tek parçayı nereye koyacağım konusunda biraz kararsızdım.
+                8-bit estetiği ile caz/blues etkileri arasında bir yerde duruyor.
+                Çok kısıtlı bir sürede, bir game jam sırasında üretildiği için
+                miksinin daha iyi olabileceğini söylemek mümkün —
+                ancak daha iyisini yapana kadar, şu anki haliyle en iyi versiyonu bu gibi hissettiriyor.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <div class="video-wrapper" style="height:166px;">
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2233930523&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+            </div>
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/enstruman-park-inworld-theme" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Enstruman Park Inworld Theme
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 14: Horror Game Soundtrack Demos -->
+<div class="row align-items-center mb-5">
+    <!-- Metin kolonu -->
+    <div class="col-12 col-md-6 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Biraz da korku ekleyelim.
+                Bu çalma listesindeki parçalar aslında
+                <em>Carlos Coronado</em> için hazırladığım demo çalışmaları.
+                <em>Infernium</em> oyununu oynayıp çok etkilenmemin ardından
+                kendisiyle iletişime geçtim ve bir sonraki oyunu için
+                müzik bestelemekle ilgilendiğimi belirttim.
+            </p>
+
+            <p class="pixel-paragraph">
+                Doğal olarak benden demo parçalar istedi ve
+                bu dört parçayı özellikle bu amaçla besteledim.
+                Parçaları çok beğendiğini ve benzer bir proje üzerinde
+                tekrar çalışırsa benimle iletişime geçeceğini söyledi —
+                ancak ne yazık ki o oyun hiç yapılmadı.
+            </p>
+
+            <p class="pixel-paragraph">
+                Bunun yerine, başka bir game jam sırasında
+                <em>Dead Whispers</em> adlı oyun için ek bir korku parçası besteledim.
+                Bu parçayı da bu demolarla birlikte dinleyebilirsiniz.
+                Umarım gelecekte, tam kapsamlı bir çevresel korku oyunu için
+                müzik besteleme şansım olur.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud iframe kolonu -->
+    <div class="col-12 col-md-6 order-md-1 text-center">
+        <div class="about-panel">
+
+            <!-- Playlist embed -->
+                <iframe width="100%" height="350" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1298844163&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100; margin-bottom:16px;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/horror-game-soundtrack-demos" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Horror Game Soundtrack Demos
+                </a>
+            </div>
+
+            <!-- Dead Whispers single embed -->
+            <div class="video-wrapper" style="height:166px;">
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1102908811&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+            </div>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/dead-whispers-soundtrack" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Dead Whispers Game Soundtrack
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 15: RoboFind -->
+<div class="row align-items-center mb-5">
+    <!-- Metin -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Biraz da dijital odaklı işlerden bahsedelim.
+                <em>RoboFind</em> bizim bir diğer game jam projemizdi ve PC için,
+                robotlar etrafında şekillenen bir oyun olduğu için müziğin de
+                mekanik ve dijital bir atmosferi yansıtması gerekiyordu.
+                Karanlık ortam, beste sürecinde son dokunuşu yaptı
+                ve genel ruh haline ekstra bir katman ekledi.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud Playlist -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <iframe width="100%" height="280" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1298880268&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/robofind-soundtracks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    RoboFind Soundtracks
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 16: Car Crashers -->
+<div class="row align-items-center mb-5">
+
+    <!-- Metin (SAĞ) -->
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Dijital ve retro öğeleri birlikte düşündüğümüzde,
+                <em>Car Crashers</em> hemen akla geliyor.
+                Bu PC yarış oyunu arabalar etrafında dönüyor; retro temalar,
+                canlı renkler ve doğal olarak müzik ön planda.
+                Aynı zamanda karanlık, Tron benzeri bir görsel atmosfere de sahip
+                ve soundtrack’te tüm bu etkileri olabildiğince
+                bir araya getirmeye çalıştım.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud (SOL) -->
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel">
+
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2233941101&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/car-crashers-soundtrack" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Car Crashers Soundtrack
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 17: Shooter Game -->
+<div class="row align-items-center mb-5">
+
+    <!-- Metin (SOL) -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Karanlık taraftan devam edelim ve biraz daha sertleşelim.
+                Bu proje bir PC shooter oyunuydu ve onun için
+                elektro gitar kayıtları almak inanılmaz keyifliydi.
+                Müzik, rock tarafımı dijital öğelerle kusursuz şekilde
+                birleştirdiği için hâlâ favori işlerim arasında —
+                özellikle de final parçası =)
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud Playlist (SAĞ) -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <iframe width="100%" height="370" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1297723246&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/shooter-game-soundtracks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Shooter Game Soundtracks
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 18: Friendly Guy -->
+<div class="row align-items-center mb-5">
+
+    <!-- Metin (SAĞ) -->
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <p class="pixel-paragraph">
+                Son olarak <em>Friendly Boy</em>, PC için geliştirmeyi
+                planladığımız flört temalı bir oyundu.
+                Oyunda şehirde dolaşıyor ve farklı kızlarla
+                ilişkiler kuruyorsunuz; parçaların bağımsız ruhu,
+                flörtün getirdiği cesaret ile şehir atmosferinde
+                dolaşmanın yarattığı masumiyetin birleşiminden doğuyor.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud Playlist (SOL) -->
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel">
+            <iframe width="100%" height="280" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2162482352&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/friendly-boy" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Friendly Boy
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 19: Compositions -->
+<div class="row align-items-center mb-5">
+    <div class="col-12 col-md-6">
+        <div class="about-text">
+            <div class="about-panel">
+                <h1 id="pinifia-originals"><span>Kendi Bestelerim</span></h1>
+                <img src="img/underline.png" class="img-fluid mb-4">
+                <p><span>
+                    Besteler söz konusu olduğunda, hatırladığım kadarıyla
+                    her zaman müzik yazıyorum.
+                    Yıllar içinde arşivim oldukça büyüdü fakat
+                    onları yayımlamak için hâlâ doğru anı bekliyorum;
+                    çünkü gerçekten tamamlanmış hissetmeleri için
+                    bazı kişisel eşikleri aşmam gerektiğini düşünüyorum.
+                    Yine de “eski ama altın” diyelim ve
+                    her şeyi paylaşmaya hazır olduğum gün gelene kadar,
+                    bu alanı geçmişte yayımladığım birkaç parça ile süsleyeyim.
+                </span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <img src="img/beste.jpg"
+                 alt="Music compositions"
+                 style="width:100%; height:auto; border-radius:8px;">
+        </div>
+    </div>
+</div>
+
+<!-- BLOK 20: Birilerinin Gerçek Yüzü -->
+<div class="row align-items-center mb-5">
+
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <p><span>
+                O halde <em>“Birilerinin Gerçek Yüzü”</em> ile başlayalım.
+                Bu parça için İTÜ Rock’tan Orhan’a eşliği için teşekkür etmek isterim —
+                bence harika bir iş çıkardı.
+                Ana karakterimizin korkularını temsil ediyordu.
+                Duyduğumuz şey korkuyla yapılan müzikal bir dans:
+                geçmişi yüzünden bir rol oynamaya zorlanan,
+                gerçek yüzünü ve potansiyelini gösteremeyen
+                birinin hikâyesi.
+            </span></p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A569333658&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinarkarabas" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Pınar Karabaş
+                </a> ·
+                <a href="https://soundcloud.com/pinarkarabas/birilerinin-gercek-yuzu-2" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Birilerinin Gerçek Yüzü
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 21: Yollar Bitmez -->
+<div class="row align-items-center mb-5">
+
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p><span>
+                <em>Yollar Bitmez</em> — çölde geçen müzikal bir hikâye.
+                Hava kavurucu derecede sıcak, ufka kadar uzanan
+                sonsuz kum tepeleri var.
+                Gitarların tekrarlı ve minimal yapısı
+                doğrudan bu ortamdan besleniyor.
+                Karakterler, sıcak ve susuzluğun yarattığı seraplar arasında
+                yolculuklarına devam ederken,
+                zihinleri geçmiş deneyimlerin şekillendirdiği
+                illüzyonlar yansıtıyor.
+                En sonunda ölüm tarafından uykuya yatırılıyorlar
+                ve başka bir boyuta doğru sessiz bir yolculuk başlıyor.
+                Geride yalnızca kum, rüzgâr ve bedenleri kalıyor.
+            </span></p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A487558356&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinarkarabas" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Pınar Karabaş
+                </a> ·
+                <a href="https://soundcloud.com/pinarkarabas/yollar-bitmez" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Yollar Bitmez
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 22: Rüya -->
+<div class="row align-items-center mb-5">
+
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <p><span>
+                Hiç rüya görürken rüya içinde olduğunuzu fark ettiniz mi —
+                ya da en azından bundan şüphelendiniz mi?
+                <em>Rüya</em> tamamen bu fikir etrafında şekilleniyor.
+                Rüyada olduğumuzu fark etmek bize kaçışın anahtarını vermez;
+                aksine onu kontrol etme gücünün
+                zaten içimizde var olduğunu gösterir.
+            </span></p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A436325535&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinarkarabas" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Pınar Karabaş
+                </a> ·
+                <a href="https://soundcloud.com/pinarkarabas/ruya" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Rüya
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- BLOK 23: Katil -->
+<div class="row align-items-center mb-5">
+
+    <!-- Metin (SOL) -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p><span>
+                <em>Katil</em>, kötü anıların geride bıraktığı travmaların
+                zihnin içinde nasıl yaşamaya devam ettiğini,
+                kurgusal bir anlatı üzerinden ele alan bir şarkı.
+            </span></p>
+        </div>
+    </div>
+
+    <!-- SoundCloud (SAĞ) -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A394179093&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinarkarabas" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Pınar Karabaş
+                </a> ·
+                <a href="https://soundcloud.com/pinarkarabas/katil" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Katil
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<button id="toTopBtn">
+  <span>Yukarı çık</span>
+</button>
+
+<!-- BLOK 24: Freelance Beginning -->
+<div class="row align-items-center mb-5">
+
+    <!-- Metin (SAĞ) -->
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <h1 id="Jingles" class="mb-4 courier-text-h1">Jingle’lar & Çeşitli Çalışmalar</h1>
+            <img src="img/underline.png" class="img-fluid mb-4">
+            <p class="courier-text-bold">
+                Müzik okulundaki ikinci yılımda, bir derste verilen arada
+                balkona çıkmıştık. Sınıf arkadaşlarımdan biri,
+                freelance bir iş aldığını ve onu yetiştirmesi gerektiğini söyledi.
+                O ana kadar bu farkındalık bende pek oluşmamıştı
+                ama tam o anda müziğin aynı zamanda bir iş olabileceğini
+                ilk kez gerçekten idrak ettim.
+                O günden beri çok sayıda projede yer aldım.
+                İşte onlardan bazıları:
+            </p>
+        </div>
+    </div>
+
+    <!-- Görsel (SOL) -->
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel">
+            <img src="img/pinistudio.jpg"
+                 alt="Pinifia Studio"
+                 style="width:100%; height:auto; border-radius:8px;">
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 25: Saatli Fırın -->
+<div class="row align-items-center mb-5">
+
+    <!-- Metin (SOL) -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="courier-text-bold">
+                <em>Saatli Fırın</em> ile başlayalım — üzerinde çalıştığım
+                en güncel projeydi.
+                Gerçekten keyifli bir üretim süreciydi ve
+                bir fırının kokusunu ve görsel atmosferini
+                olabildiğince müziğe yansıtmaya çalıştım.
+                Sözler konusunda tamamen özgür bırakıldığım için
+                süreç oldukça rahat ve akıcı geçti.
+                Tek bir revizyon bile olmadan,
+                tam isabet bir iş olarak tamamlandı.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud (SAĞ) -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2234763623&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/saatli-firin-reklam-muzigi-bakery-commercial-music"
+                   target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Saatli Fırın Reklam Müziği (Bakery Commercial Music)
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 26: Penti Commercial (Assignment) -->
+<div class="row align-items-center mb-5">
+
+    <!-- Metin (SAĞ) -->
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <p class="courier-text-bold">
+                Bu parça, reklam müziği dersi kapsamında verilen bir ödevdi.
+                Sözler bize hazır olarak verilmişti ve
+                üzerlerinde hiçbir değişiklik yapma özgürlüğümüz yoktu —
+                işin temel zorluğu da buydu.
+                Ortaya çıkan sonuç ise bu oldu.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud (SOL) -->
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel">
+
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1102984762&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;
+                        font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/penti-reklam-muzigi-ornektir"
+                   target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Penti Reklam Müziği (Örnektir)
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 27 -->
+<div class="row align-items-center mb-5">
+
+    <!-- METİN (SOL) -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="courier-text-bold">
+                Bu da aynı dersten verilen bir diğer ödevdi ve
+                bu çalışma sayesinde sonrasında oldukça fazla iş aldım.
+                Yine sözler bize hazır olarak verilmişti ve
+                önceki gibi ortaya çıkan sonuç bu oldu.
+            </p>
+        </div>
+    </div>
+
+    <!-- SOUNDCLOUD (SAĞ) -->
+    <div class="col-12 col-md-6 text-center">
+        <div class="about-panel">
+
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1101795643&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden;
+                        white-space:nowrap; text-overflow:ellipsis;
+                        font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+                        font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/efe-tur-reklam-muzigi-ornektir"
+                   target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Efe Tur Reklam Müziği (Örnektir)
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- BLOK 28 -->
+<div class="row align-items-center mb-5">
+
+    <!-- METİN (SAĞ) -->
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <p class="courier-text-bold">
+                Sıradaki işler, yurt dışında faaliyet gösteren
+                bir Türk süpermarket zinciri için ürettiğim çalışmalardan oluşuyor.
+            </p>
+        </div>
+    </div>
+
+    <!-- SOUNDCLOUD (SOL) -->
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel">
+
+            <iframe width="100%" height="235" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1297713937&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+
+            <div style="font-size:10px; color:#cccccc; line-break:anywhere; word-break:normal; overflow:hidden;
+                        white-space:nowrap; text-overflow:ellipsis;
+                        font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+                        font-weight:100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#cccccc; text-decoration:none;">
+                    PinifiaWorks
+                </a> ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/suepermarket-muezikleri"
+                   target="_blank" style="color:#cccccc; text-decoration:none;">
+                    Süpermarket Müzikleri
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- BLOK 29 -->
+<div class="row align-items-center mb-5">
+<div class="col-12 col-md-6">
+    <div class="about-panel">
+        <p class="courier-text-bold">
+            Bu çalışma bir Türk süpermarket zinciri için hazırlandı — bazıları müziğin içine
+            doğrudan yerleştirilmiş anonslar içeren, vokal ağırlıklı bestelerden oluşan bir koleksiyon.
+        </p>
+    </div>
+</div>
+
+<div class="col-12 col-md-6 text-center">
+    <div class="about-panel">
+
+        <iframe width="100%" height="280" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1297676428&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+        </iframe>
+
+        <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+            <a href="https://soundcloud.com/pinifiaworks" title="PinifiaWorks" target="_blank" style="color: #cccccc; text-decoration: none;">
+                PinifiaWorks
+            </a>
+            ·
+            <a href="https://soundcloud.com/pinifiaworks/sets/market-reklamlar-m" title="Market Reklamları" target="_blank" style="color: #cccccc; text-decoration: none;">
+                Market Reklamları
+            </a>
+        </div>
+</div>
+    </div>
+</div>
+
+<div class="row align-items-center mb-5">
+
+      <!-- METİN SAĞ -->
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <p class="courier-text-bold">
+                Bu da başka bir sipariş projeydi; bir firma için özel olarak bestelenmiş
+                santral bekleme müziği ve seslendirme çalışması.
+            </p>
+        </div>
+    </div>
+
+    <!-- SoundCloud SOL -->
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel text-center">
+
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1101482026&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+
+            <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#ccc; text-decoration:none;">
+                    PinifiaWorks
+                </a>
+                ·
+                <a href="https://soundcloud.com/pinifiaworks/santral-bekleme-muzigi" target="_blank" style="color:#ccc; text-decoration:none;">
+                    Santral Bekleme Müziği
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="row align-items-center mb-5">
+
+    <!-- METİN SOL -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel">
+            <p class="courier-text-bold">
+                Ya da bir YouTube kanalı için bestelenmiş bir tanıtım teması.
+            </p>
+        </div>
+    </div>
+
+    <!-- SOUNDCLOUD SAĞ -->
+    <div class="col-12 col-md-6">
+        <div class="about-panel text-center">
+
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1103069806&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+
+            <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#ccc; text-decoration:none;">
+                    PinifiaWorks
+                </a>
+                ·
+                <a href="https://soundcloud.com/pinifiaworks/cocuk-kanali-tanitim-muzigi" target="_blank" style="color:#ccc; text-decoration:none;">
+                    Çocuk Kanalı Tanıtım Müziği
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="row align-items-center mb-5">
+
+     <!-- METİN SAĞ -->
+    <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="about-panel">
+            <p class="courier-text-bold">
+                Son olarak, ilk freelance işlerime ait örnekler olarak bu iki parçayı paylaşabilirim.
+                Dünyanın en iyi işleri olmadıklarını biliyorum — sonuçta ilk denemelerimdi —
+                ama en nihayetinde bir seçim aracından yayınlandılar.
+                Bana seçim vaatlerini içeren bir katalog PDF’i gönderildi ve sözler,
+                bunun da dahil olduğu birçok materyal üzerinden yazıldı.
+            </p>
+        </div>
+    </div>
+
+    <!-- SOUNDCLOUD SOL -->
+    <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+        <div class="about-panel text-center">
+
+            <iframe width="100%" height="280" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1297450885&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+
+            <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+                <a href="https://soundcloud.com/pinifiaworks" target="_blank" style="color:#ccc; text-decoration:none;">
+                    PinifiaWorks
+                </a>
+                ·
+                <a href="https://soundcloud.com/pinifiaworks/sets/secim-muezikleri" target="_blank" style="color:#ccc; text-decoration:none;">
+                    Seçim Müzikleri
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+            <!-- ALT LINK GRID (4 kutu) -->
+            <div class="link-grid-container">
+                <a href="indextr.html" class="link-box"><img src="img/home.png" class="link-icon" alt="Icon 1"><span>Ana Sayfaya Dön</span></a>
+                <a href="aboutmetr.html" class="link-box"><img src="img/icon13.png" class="link-icon" alt="Icon 2"><span>Hakkımda</span></a>
+                <a href="multimediatr.html" class="link-box"><img src="img/icon3.gif" class="link-icon" alt="Icon 3"><span>Canlı & Multimedya</span></a>
+                <a href="contacttr.html" class="link-box"><img src="img/icon9.png" class="link-icon" alt="Icon 4"><span>Sosyal Medya & İletişim</span></a>
+            </div>
+<!-- EN / TR -->
+      <div class="bottom-lang-box">
+        <a href="portfolio.html">EN</a> | 
+        <a href="portfoliotr.html">TR</a>
+      </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  const toTopBtn = document.getElementById("toTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      toTopBtn.style.opacity = "1";
+      toTopBtn.style.pointerEvents = "auto";
+    } else {
+      toTopBtn.style.opacity = "0";
+      toTopBtn.style.pointerEvents = "none";
+    }
+  });
+
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>    
+<script src="slick/slick.min.js"></script>  
+<script src="js/anime.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(function(){
+    $('.tm-current-year').text(new Date().getFullYear());
+});
+</script>
+</body>
+</html>
