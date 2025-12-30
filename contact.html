@@ -132,7 +132,7 @@ span {
 }
         
 #tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
-.tm-main-content { width: 100%; display:flex; justify-content:center; min-height:100vh; padding-top:0; margin-top:0; position:relative; top:0; transform:none; }
+.tm-main-content { width: 100%; display:flex; justify-content:center; min-height: auto; padding-top:0; padding-bottom: 10px; margin-top:0; position:relative; top:0; transform:none; }
 .tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
 .tm-site-header-container .row { justify-content:center; }
 .tm-site-header-container img { position:relative; z-index:10; }
@@ -163,7 +163,7 @@ span {
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:16px;
-    margin:40px auto;
+    margin:40px auto 14px auto; /* ⬅ EN/TR ile 10px */
     max-width:1200px;
     padding:0 12px;
 }
@@ -207,7 +207,7 @@ span {
     position: relative;      /* fixed YOK */
     display: block;
 
-    margin: 40px auto 20px auto;
+    margin: 4px auto 10px auto;
     padding: 10px 25px;
 
     background: rgba(255,255,255,0.6);
@@ -281,21 +281,34 @@ span {
     </div>
 </div>
 
-            <!-- ALT LINK GRID (4 kutu) -->
-            <div class="link-grid-container">
-                <a href="index.html" class="link-box"><img src="img/home.png" class="link-icon" alt="Icon 1"><span>Back to Home</span></a>
-                <a href="aboutme.html" class="link-box"><img src="img/icon13.png" class="link-icon" alt="Icon 4"><span>About Me</span></a>
-                <a href="portfolio.html" class="link-box"><img src="img/icon2.gif" class="link-icon" alt="Icon 2"><span>Compositions & Portfolio</span></a>
-                <a href="multimedia.html" class="link-box"><img src="img/icon3.gif" class="link-icon" alt="Icon 3"><span>Live & Multimedia</span></a>
-                
-            </div>
+  <!-- ALT LINK GRID -->
+      <div class="link-grid-container">
+        <a href="index.html" class="link-box">
+          <img src="img/home.png" class="link-icon">
+          Back to Home
+        </a>
+        <a href="aboutme.html" class="link-box">
+          <img src="img/icon13.png" class="link-icon">
+          About Me
+        </a>
+        <a href="portfolio.html" class="link-box">
+          <img src="img/icon2.gif" class="link-icon">
+          Portfolio
+        </a>
+        <a href="multimedia.html" class="link-box">
+          <img src="img/icon3.gif" class="link-icon">
+          Live & Multimedia
+        </a>
+      </div>
 
-        </div>
+      <!-- EN / TR -->
+      <div class="bottom-lang-box">
+        <a href="aboutme.html">EN</a> | 
+        <a href="aboutmetr.html">TR</a>
+      </div>
+
     </div>
-</div>
-<div class="bottom-lang-box glow-layer" data-text="EN / TR">
-    <a href="contact.html" class="bottom-box-link">EN</a> |
-    <a href="contacttr.html" class="bottom-box-link">TR</a>
+  </div>
 </div>
 
 
