@@ -1,1 +1,322 @@
-şlkgşlkgşl
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pinifia</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            t.innerHTML = "root: { --tmp-var: bold; }";
+            document.head.appendChild(t);
+            e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight","var(--tmp-var)"));
+            t.parentNode.removeChild(t);
+            return e;
+        };
+        supportsCssVars() || alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
+    </script>
+
+    <style>
+        /* GENEL YAZI & FONT */
+        body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+            font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
+            line-height: 1.5;
+            color: rgb(99,127,148);
+            font-weight: bold;
+            background-color: rgba(255,255,255,0);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        p { font-size: 20px; }
+        h1 { font-size: 46px; }
+       
+        /* BUTON & ÜZERİNE GELİNCE */
+        .product__bg {
+            background: rgba(255, 255, 255, 0.6);
+            opacity: 1;
+            transform: none;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+        }
+        .product:hover .product__bg {
+            background: rgba(255, 0, 0, 0.5);
+        }
+
+        /* NAV & ICON */
+        .tm-nav-icon {
+            width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            z-index: 1;
+        }
+        .tm-nav-text {
+            position: relative;
+            line-height: 1.2;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 8px;
+            z-index: 2;
+            top: 0;
+            color: rgb(99,127,148);
+            background-color: rgba(255,255,255,0.5);
+            padding: 6px;
+            border-radius: 4px;
+            font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
+        }
+        .tm-nav-link:hover .tm-nav-text {
+            color: rgb(255,0,0);
+            background-color: rgba(255,255,255,0.5);
+            gap: 8px;
+        }
+span {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+  color: rgb(99,127,148);
+  padding: 4px 6px;
+
+  background-color: rgba(255,255,255,0.85);
+
+  -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) -20%,
+      rgba(0,0,0,1) 40%,
+      rgba(0,0,0,1) 60%,
+      rgba(0,0,0,0) 120%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 6px,
+      rgba(0,0,0,1) calc(100% - 6px),
+      rgba(0,0,0,0) 100%
+    );
+
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+}
+
+.about-panel {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 0px solid rgba(255, 255, 255, 0);
+    border-radius: 0px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.about-panel p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    line-height: 1.6;
+}
+        
+#tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
+.tm-main-content { width: 100%; display:flex; justify-content:center; min-height:100vh; padding-top:0; margin-top:0; position:relative; top:0; transform:none; }
+.tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
+.tm-site-header-container .row { justify-content:center; }
+.tm-site-header-container img { position:relative; z-index:10; }
+#tm-bg { z-index:0; }
+
+.tm-site-header { background-position:center center; background-size:cover; }
+@media (max-width:768px){ .tm-site-header { background-position:left center; } }
+
+@media (max-width:768px){ .about-panel{ padding:18px; } }
+@media (max-width:576px){
+    .tm-site-header-container { padding-left:4px; padding-right:4px; margin-top:20px !important; }
+    .tm-site-header-container .col-12 { padding-left:4px; padding-right:4px; }
+    .about-panel{ padding:14px 8px; }
+    .about-panel p{ font-size:17px; line-height:1.6; text-align:left; hyphens:none; }
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+.video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:0; }
+.about-panel .video-wrapper:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.link-grid-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin:40px auto;
+    max-width:1200px;
+    padding:0 12px;
+}
+.link-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: rgb(99,127,148);
+    font-family: "Rubik Doodle Shadow", system-ui, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    text-align:center;
+    padding:24px;
+    border-radius:0;
+    text-decoration:none;
+    transition: background 0.3s, transform 0.3s;
+}
+.link-box:hover{
+    background: rgba(219,105,63,0.5);
+    color: rgba(255,119,51,1);
+    transform:translateY(-4px);
+}
+.link-icon{ width:60px; height:auto; margin-bottom:12px; }
+@media(max-width:768px){
+    .link-grid-container{ grid-template-columns:repeat(2,1fr); gap:12px; margin:20px auto; }
+    .link-box{ font-size:18px; padding:18px; }
+    .link-icon{ width:50px; }
+}
+@media(max-width:480px){
+    .link-grid-container{ grid-template-columns:1fr; gap:12px; }
+    .link-box{ font-size:16px; padding:14px; }
+    .link-icon{ width:40px; }
+}
+.link-box:hover span{ color: rgb(223, 100, 39); }
+</style>
+</head>
+
+<body>
+  
+<div id="tm-bg"></div>
+<div id="tm-wrap">
+    <div class="tm-main-content">
+        <div class="container tm-site-header-container">
+
+            <!-- BLOK 1 -->
+            <div class="row align-items-center mb-5">
+                <!-- Sol Kolon: Metin -->
+                <div class="col-12 col-md-6">
+                    <div class="about-text">
+                        <div class="about-panel">
+                            <h1 class="mb-4"><span>Live & Multimedia</span></h1>
+                            <img src="img/underline.png" class="img-fluid mb-4">
+                            <p><span>
+                                I will announce our new concert dates here. Right now, I am singing in the band Mental Damage. Since we are a new band, we have been practicing and have just played two concerts recently.
+                            </span></p>
+                            <p><span>
+                                It would also be good to talk about my previous bands. For example, İki Yüz Yirmi was my second band between 2022-2023, and I still miss them. We had a lot of fun together. This picture, for example, is from Zorlu Performans Sanatları Merkezi. It was a fantastic stage with a great sound system, and we were the opening band for Yonca Evcimik at that school event, which is why we are standing in front of all those children.
+                            </span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ Kolon: 2 Resim Alt Alta -->
+                <div class="col-12 col-md-6 text-center">
+                    <div class="about-panel">
+                        <img src="img/IMG-20221028-WA0008.jpg" class="img-fluid mb-4">
+                        <img src="img/IMG-20221028-WA0010.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOK 2 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6 order-md-2">
+                    <div class="about-panel">
+                        <p><span>
+                            With the same band, we went to Karaman by high-speed train and played at the university. It was a lot of fun because the audience was very engaged, and everyone in the school contributed together to create a "train" by holding each other. Guess who was the driver? =p One of my top memories in life. They also gave us many gifts, including this plaque, for which I am still very thankful.
+                        </span></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 text-center">
+                    <div class="about-panel">
+                        <img src="img/IMG-20221224-WA0007.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOK 3 -->
+            <div class="row align-items-center mb-5">
+                <!-- Sol Kolon: Metin ve Resim -->
+                <div class="col-12 col-md-6">
+                    <div class="about-panel">
+                        <p><span>
+                            While performing, a band called Cold Turkey noticed me, and I continued singing in their band for 2 years. It was one of the best band experiences because all the musicians were very skilled at what they do.
+                        </span></p>
+                        <img src="img/IMG-20240102-WA0000.jpg" class="img-fluid mt-0">
+                    </div>
+                </div>
+
+                <!-- Sağ Kolon: Resim ve Paragraf -->
+                <div class="col-12 col-md-6 text-center">
+                    <div class="about-panel">
+                        <img src="img/IMG-20220619-WA0014.JPG" class="img-fluid mb-3">
+                        <p><span>We also continued giving concerts locally, about 2-3 times a month.</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOK 4 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-12 col-md-6 order-md-2">
+                    <div class="about-panel">
+                        <p><span>
+                            Right now, I am continuing with Mental Damage. We basically play hard rock, and next month we will be on stage again. Follow us for more information on: <a href="https://www.instagram.com/mentaldamagetr/" target="_blank">Instagram</a>.
+                        </span></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 text-center">
+                    <div class="about-panel">
+                        <img src="img/IMG-20251214-WA0002.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+            <!-- ALT LINK GRID (4 kutu) -->
+            <div class="link-grid-container">
+                <a href="index.html" class="link-box"><img src="img/home.png" class="link-icon" alt="Icon 1"><span>Back to Home</span></a>                
+                <a href="aboutme.html" class="link-box"><img src="img/icon13.png" class="link-icon" alt="Icon 3"><span>About Me</span></a>
+                <a href="portfolio.html" class="link-box"><img src="img/icon2.gif" class="link-icon" alt="Icon 2"><span>Compositions & Portfolio</span></a>
+                <a href="contact.html" class="link-box"><img src="img/icon9.png" class="link-icon" alt="Icon 4"><span>Social Media & Contact</span></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>    
+<script src="slick/slick.min.js"></script>  
+<script src="js/anime.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(function(){
+    $('.tm-current-year').text(new Date().getFullYear());
+});
+</script>
+</body>
+</html>
