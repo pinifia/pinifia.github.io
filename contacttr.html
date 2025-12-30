@@ -30,15 +30,43 @@
     </script>
 
     <style>
+
+        body {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+    padding: 8px 12px;
+}
+
+
+@media (max-width:576px){
+    h1 { font-size: 30px; }
+    p { font-size: 16px; }
+
+    .tm-site-header-container {
+        margin-top: 40px;
+    }
+
+    .link-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+        
         body, p, h1, h2, h3, h4, h5, h6, button, input, select, textarea {
             font-family: "Rubik Doodle Shadow", system-ui, sans-serif !important;
             line-height: 1.5;
             color: rgb(99,127,148);
             font-weight: bold;
             background-color: rgba(255,255,255,0);
-            padding: 8px 12px;
             border-radius: 6px;
-            overflow-y: auto;
         }
         p { font-size: 20px; }
         h1 { font-size: 46px; }
