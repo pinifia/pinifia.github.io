@@ -135,7 +135,7 @@ span {
 }
         
 #tm-wrap { position: relative; z-index:1; display:flex; justify-content:center; }
-.tm-main-content { width: 100%; display:flex; justify-content:center; min-height:100vh; padding-top:0; margin-top:0; position:relative; top:0; transform:none; }
+.tm-main-content { width: 100%; display:flex; justify-content:center; min-height: auto; padding-top:0; margin-top:0; position:relative; top:0; transform:none; }
 .tm-site-header-container { width:100%; max-width:1100px; margin:120px auto 0 auto; }
 .tm-site-header-container .row { justify-content:center; }
 .tm-site-header-container img { position:relative; z-index:10; }
@@ -183,9 +183,10 @@ span {
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:16px;
-    margin:40px auto;
+    margin:40px auto 14px auto;
     max-width:1200px;
     padding:0 12px;
+    margin-bottom:14px;
 }
 .link-box{
     display:flex;
@@ -368,6 +369,25 @@ span {
 
 #toTopBtn:hover {
   background: rgba(255, 255, 255, 0.8);
+}
+
+.bottom-lang-box {
+    position: relative;      /* fixed YOK */
+    display: block;
+
+    margin: 3px auto 6px auto;
+    margin-top:0;
+    padding: 10px 25px;
+
+    background: rgba(255,255,255,0.6);
+    border: 1px solid white;
+    border-radius: 0;
+
+    width: fit-content;
+    text-align: center;
+
+    color: rgb(99,127,148);
+    z-index: 999;            /* üstte kalsın */
 }
 
 </style>
@@ -1569,10 +1589,15 @@ span {
                 <a href="multimedia.html" class="link-box"><img src="img/icon3.gif" class="link-icon" alt="Icon 3"><span>Live & Multimedia</span></a>
                 <a href="contact.html" class="link-box"><img src="img/icon9.png" class="link-icon" alt="Icon 4"><span>Social Media & Contact</span></a>
             </div>
-
+<!-- EN / TR -->
+      <div class="bottom-lang-box">
+        <a href="portfolio.html">EN</a> | 
+        <a href="portfoliotr.html">TR</a>
+      </div>
         </div>
     </div>
 </div>
+ 
 
 <script>
   const toTopBtn = document.getElementById("toTopBtn");
